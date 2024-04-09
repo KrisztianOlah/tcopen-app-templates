@@ -125,7 +125,7 @@ estop:=FALSE;
 presure:=FALSE;
 
 //_dummyBlinker(inOffTime := T#10000MS, inOnTime := T#10000MS);
-
+(*
 closed:=GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_8.Input;
 locked:=GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_9.Input;
 
@@ -181,7 +181,8 @@ _components.Zone(inDoorCircuit:=_components.DoorCicuit,
 				inAirPressureOK:= _components.AirPresureOk.Signal);
 		
 				
-_components.Zone.Service();]]></ST>
+_components.Zone.Service();
+*)]]></ST>
       </Implementation>
     </Method>
     <Method Name="InitializeComponentsOnce" Id="{78fe5985-ea43-49bb-a2ff-319ea6fb4a1a}" FolderPath="Initialize\">
@@ -324,10 +325,10 @@ _cu00x();
 _automatAllTask();
 _groundAllTask();
 
-Device_1(	SyncUnits		:= ADR(		GVL_iXlinker.EC1.SyncUnits),
-			SyncUnitsSize	:= SIZEOF(	GVL_iXlinker.EC1.SyncUnits),
-			Inputs			:=			GVL_iXlinker.EC1.Inputs,
-			InfoData		:=			GVL_iXlinker.EC1.InfoData);	]]></ST>
+//Device_1(	SyncUnits		:= ADR(		GVL_iXlinker.EC1.SyncUnits),
+//			SyncUnitsSize	:= SIZEOF(	GVL_iXlinker.EC1.SyncUnits),
+//			Inputs			:=			GVL_iXlinker.EC1.Inputs,
+//			InfoData		:=			GVL_iXlinker.EC1.InfoData);	]]></ST>
       </Implementation>
     </Method>
     <Method Name="OnExit" Id="{29dbb73f-9a28-0fe3-31dc-e1185889822b}">

@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.2.0.0">
-  <DUT Name="EC1_880CB0B9" Id="{654f8d88-a6f6-411a-a975-e91291d052cc}">
+  <DUT Name="EC_245FBB9A" Id="{bd6416fa-4f80-462c-8da4-11e43e05aa35}">
     <Declaration><![CDATA[{attribute 'GeneratedUsingTerminal: IODEVICETYPE_ETHERCATPROT'}
 {attribute addProperty BoxType "IODEVICETYPE_ETHERCATPROT"}
-{attribute addProperty Id "EK1200EK1200_319FD71D204SyncUnitsSyncUnits_67D36DDA18InputsInputs_A65FACA410OutputsOutputs_23C0ED1D6InfoDataInfoData_84133AC922"}
-{attribute addProperty CRC "2282533049"}
-{attribute addProperty Size "260"}
-{attribute addProperty Name "EC1"}
-TYPE EC1_880CB0B9 EXTENDS TcoIo.EtcMasterBase_62654B43 :
+{attribute addProperty Id "ECEC_4E5C738F193SyncUnitsSyncUnits_67D36DDA18InputsInputs_A65FACA410OutputsOutputs_23C0ED1D6InfoDataInfoData_84133AC922"}
+{attribute addProperty CRC "610253722"}
+{attribute addProperty Size "249"}
+{attribute addProperty Name "EC"}
+TYPE EC_245FBB9A EXTENDS TcoIo.EtcMasterBase_62654B43 :
 STRUCT
-	{attribute addProperty Name " (EK1200)"}
-	{attribute addProperty PreviousPort "EC1 : Master"}
+	{attribute addProperty Name "EC"}
+	{attribute addProperty PreviousPort "EC : Master"}
 	{attribute addProperty SyncUnit "default"}
-	EK1200 : EK1200_319FD71D;
+	EC : EC_4E5C738F;
 	{attribute addProperty Name "SyncUnits"}
 	SyncUnits : SyncUnits_67D36DDA;
 	{attribute addProperty Name "Inputs"}

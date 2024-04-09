@@ -388,5 +388,7 @@ MAIN SEQUENCE</value>
   <data name="Technology" xml:space="preserve">
     <value>Technology</value>
   </data>
-
+  <data name="Tasks" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
 </root>

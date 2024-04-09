@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.2.0.0">
-  <DUT Name="EL1809_32157CFD" Id="{241f8feb-bcf3-40a1-acd0-df57bea27b8a}">
-    <Declaration><![CDATA[{attribute 'GeneratedUsingTerminal: EL1809-0000-0018'}
+  <DUT Name="EPP1809_32157CFD" Id="{c2042a8b-2f62-4d5a-82bf-f11d60f4a2e3}">
+    <Declaration><![CDATA[{attribute 'GeneratedUsingTerminal: EPP1809-0021-0016'}
 {attribute addProperty VendorId "#x00000002"}
-{attribute addProperty BoxType "EL1809-0000-0018"}
-{attribute addProperty Description "EL1809 16Ch. Dig. Input 24V, 3ms"}
-{attribute addProperty Physics "KK"}
+{attribute addProperty BoxType "EPP1809-0021-0016"}
+{attribute addProperty Description "EPP1809-0021 16 Ch. Dig. Input 24V, 3ms, M8"}
+{attribute addProperty Physics "YY"}
 {attribute addProperty Id "Channel_1AT %I*Channel_830843C11Channel_2AT %I*Channel_830843C11Channel_3AT %I*Channel_830843C11Channel_4AT %I*Channel_830843C11Channel_5AT %I*Channel_830843C11Channel_6AT %I*Channel_830843C11Channel_7AT %I*Channel_830843C11Channel_8AT %I*Channel_830843C11Channel_9AT %I*Channel_830843C11Channel_10AT %I*Channel_830843C11Channel_11AT %I*Channel_830843C11Channel_12AT %I*Channel_830843C11Channel_13AT %I*Channel_830843C11Channel_14AT %I*Channel_830843C11Channel_15AT %I*Channel_830843C11Channel_16AT %I*Channel_830843C11WcStateAT %I*WcState_9091E0EB2InfoDataAT %I*InfoData_6F19DB2B2"}
 {attribute addProperty CRC "840269053"}
 {attribute addProperty Size "20"}
-TYPE EL1809_32157CFD EXTENDS TcoIo.EtcSlaveTerminalBase_947E5A46 :
+TYPE EPP1809_32157CFD EXTENDS TcoIo.EtcSlaveBoxBase_77A0E4A7 :
 STRUCT
 	{attribute addProperty Name "Channel_1"}
 	Channel_1 : Channel_830843C1;

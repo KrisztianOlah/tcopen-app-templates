@@ -52,8 +52,12 @@ TYPE
      	TixonPickVibro : TcoTixonFeeding.TcoTixonPickVibro_v_1_x_x (THISSTRUCT);
 		{attribute addProperty Name "Tixon Pick Step"}
      	TixonPickStep : TcoTixonFeeding.TcoTixonPickStep_v_1_x_x(THISSTRUCT);
-				
-
+			
+		{attribute wpf [Container(Layout.Stack,"MtsFeeding")]}	
+		{attribute wpf [Group(Layout.Scroll)]}
+		PlsPaletizator:TcoPlsPaletizator(THISSTRUCT);	
+		{attribute clr [RenderIgnore()]}
+		PlsPaletizatorComponents:TcoPlsPaletizator_Components:= (Parent := THISSTRUCT);  
 		
 		{attribute wpf [Container(Layout.Stack,"Wrapped component example")]}	
 		{attribute wpf [Group(Layout.Scroll)]}

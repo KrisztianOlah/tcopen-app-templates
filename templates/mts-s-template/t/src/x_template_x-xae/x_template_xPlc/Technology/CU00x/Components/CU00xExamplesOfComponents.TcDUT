@@ -11,6 +11,9 @@ STRUCT
 		{attribute addProperty Name "(A2)VERTICAL AXIS"}
       	verticalCylinder : TcoPneumatics.TcoCylinder(THISSTRUCT); 
 		
+		{attribute addProperty Name "(A3)DOUBLE "}
+      	doubleCylinder : TcoPneumatics.TcoDoubleCylinder(THISSTRUCT); 
+		
 		{attribute wpf [Container(Layout.Stack,"INPUTS")]}	
 		{attribute addProperty Name "PRESENCE ON INSPECTION"}
      	PresenceOnInspection : TcoElements.TcoDi(THISSTRUCT);

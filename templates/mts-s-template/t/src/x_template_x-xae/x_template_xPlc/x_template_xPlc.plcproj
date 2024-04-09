@@ -32,10 +32,25 @@
     <Compile Include="Abstractions\Components\ArrayRenderingExample\SampleDataItem.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Abstractions\Components\WrappedComponent\WrappedComponentExample.TcPOU">
+    <Compile Include="Abstractions\Components\MtsFeeding\TcoFeedingSequenceTask.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Abstractions\Components\WrappedComponent\WrappedComponentsExample.TcDUT">
+    <Compile Include="Abstractions\Components\MtsFeeding\TcoPlsPaletizator.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Abstractions\Components\MtsFeeding\TcoPlsPaletizator_Components.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Abstractions\Components\MtsFeeding\TcoPlsPaletizator_Config_v_1_x_x.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Abstractions\Components\MtsFeeding\TcoPlsPaletizator_Control_v_1_x_x.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Abstractions\Components\MtsFeeding\TcoPlsPaletizator_Status_v_1_x_x.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Abstractions\Components\WrappedComponent\WrappedComponentExample.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Abstractions\Components\WrappedComponent\WrappedComponentExample_Config.TcDUT">
@@ -45,6 +60,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Abstractions\Components\WrappedComponent\WrappedComponentExample_Status.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Abstractions\Components\WrappedComponent\WrappedComponentsExample.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Abstractions\CUBase\CuBaseRecurringFail.TcDUT">
@@ -281,25 +299,19 @@
     <Compile Include="Technology\TechnologyComponents.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\PdoEntries\Status_3035BE2E.TcDUT">
+    <Compile Include="DUTs\IO\PDOs\Device_State_F0482DC3.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\PdoEntries\Status_B6795845.TcDUT">
+    <Compile Include="DUTs\IO\PDOs\Device_Control_6258066A.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\PdoEntries\Control_F189B737.TcDUT">
+    <Compile Include="DUTs\IO\PDOs\Inputs_23559BB0.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\PdoEntries\Control_C948E0F2.TcDUT">
+    <Compile Include="DUTs\IO\PDOs\Outputs_FC2FACAD.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\PdoEntries\Status_3D84275F.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PdoEntries\Ctrl_71604E86.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PDOs\InfoData_8F85596B.TcDUT">
+    <Compile Include="DUTs\IO\PDOs\Modules_85784B27.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\IO\PDOs\Channel_830843C1.TcDUT">
@@ -308,55 +320,28 @@
     <Compile Include="DUTs\IO\PDOs\Channel_42CA91F7.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\PDOs\AO_Output_Channel_BA7EBB7C.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PDOs\ENC_Status_compact_Channel_DC559AB0.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PDOs\DCM_Status_Channel_36ED096F.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PDOs\ENC_Control_compact_Channel_2E82BC43.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PDOs\DCM_Control_Channel_5A8B5016.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PDOs\DCM_Velocity_Channel_A47A3F41.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PDOs\InfoData_FC36B521.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PDOs\COM_Inputs_3801C95E.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\PDOs\COM_Outputs_DEF408EC.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="DUTs\IO\Boxes\EK1200_013D0B49.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\IO\Boxes\EK1122_1FC0878B.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\Boxes\EL6631_A0EC075C.TcDUT">
+    <Compile Include="DUTs\IO\Boxes\AES_510494FB.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\Boxes\EPP1322_1FC0878B.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\Boxes\EPP1809_32157CFD.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\Boxes\EPP1008_78E8D3DD.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\IO\Boxes\EL1809_32157CFD.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\IO\Boxes\EL2809_2B6483BD.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\Boxes\EL4004_E203F875.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\Boxes\EL7342_CEEFFCBE.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\IO\Boxes\EL6001_0DE01E7E.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\IO\Boxes\EL9011_D65D3D32.TcDUT">
@@ -368,10 +353,13 @@
     <Compile Include="DUTs\IO\Devices\SyncUnits_67D36DDA.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\Topology\EK1200_319FD71D.TcDUT">
+    <Compile Include="DUTs\IO\Topology\EK_E812B8FA.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\Topology\EC1_880CB0B9.TcDUT">
+    <Compile Include="DUTs\IO\Topology\EC_4E5C738F.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\Topology\EC_245FBB9A.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GVLs\GVL_iXlinker.TcGVL">
@@ -381,6 +369,7 @@
   <ItemGroup>
     <Folder Include="Abstractions" />
     <Folder Include="Abstractions\Components\ArrayRenderingExample" />
+    <Folder Include="Abstractions\Components\MtsFeeding" />
     <Folder Include="Abstractions\Components\WrappedComponent" />
     <Folder Include="Abstractions\CUBase" />
     <Folder Include="Abstractions\CUBase\Data" />

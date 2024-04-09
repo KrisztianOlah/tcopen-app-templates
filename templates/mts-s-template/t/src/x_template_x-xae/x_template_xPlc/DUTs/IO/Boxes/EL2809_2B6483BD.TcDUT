@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.2.0.0">
-  <DUT Name="EL2809_2B6483BD" Id="{1b298aa5-9aa6-47c2-8dfe-385316297668}">
-    <Declaration><![CDATA[{attribute 'GeneratedUsingTerminal: EL2809-0000-0018'}
+  <DUT Name="EL2809_2B6483BD" Id="{f5f6f3f2-de56-4f18-85fe-36916a644752}">
+    <Declaration><![CDATA[{attribute 'GeneratedUsingTerminal: EL2809-0015-0016'}
 {attribute addProperty VendorId "#x00000002"}
-{attribute addProperty BoxType "EL2809-0000-0018"}
-{attribute addProperty Description "EL2809 16Ch. Dig. Output 24V, 0.5A"}
+{attribute addProperty BoxType "EL2809-0015-0016"}
+{attribute addProperty Description "EL2809-0015 16Ch. Dig. Output 24V DC, 0.35A, not short-circuit proof"}
 {attribute addProperty Physics "KK"}
 {attribute addProperty Id "Channel_1AT %Q*Channel_42CA91F71Channel_2AT %Q*Channel_42CA91F71Channel_3AT %Q*Channel_42CA91F71Channel_4AT %Q*Channel_42CA91F71Channel_5AT %Q*Channel_42CA91F71Channel_6AT %Q*Channel_42CA91F71Channel_7AT %Q*Channel_42CA91F71Channel_8AT %Q*Channel_42CA91F71Channel_9AT %Q*Channel_42CA91F71Channel_10AT %Q*Channel_42CA91F71Channel_11AT %Q*Channel_42CA91F71Channel_12AT %Q*Channel_42CA91F71Channel_13AT %Q*Channel_42CA91F71Channel_14AT %Q*Channel_42CA91F71Channel_15AT %Q*Channel_42CA91F71Channel_16AT %Q*Channel_42CA91F71WcStateAT %I*WcState_0B2B16F91InfoDataAT %I*InfoData_6F19DB2B2"}
 {attribute addProperty CRC "728007613"}

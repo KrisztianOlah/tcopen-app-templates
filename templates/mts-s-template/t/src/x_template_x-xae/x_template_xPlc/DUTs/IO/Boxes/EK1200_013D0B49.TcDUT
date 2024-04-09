@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.2.0.0">
-  <DUT Name="EK1200_013D0B49" Id="{c6d55c21-45d4-49c6-b591-e46141dc51fa}">
+  <DUT Name="EK1200_013D0B49" Id="{0c982864-e29b-407b-b2cb-9a1dde70d116}">
     <Declaration><![CDATA[{attribute 'GeneratedUsingTerminal: EK1200-1388-0000'}
 {attribute addProperty VendorId "#x00000002"}
 {attribute addProperty BoxType "EK1200-1388-0000"}

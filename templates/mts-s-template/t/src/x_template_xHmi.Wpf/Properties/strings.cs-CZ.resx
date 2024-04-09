@@ -379,5 +379,7 @@ HLAVNÍ SEKVENCE!</value>
   <data name="Technology" xml:space="preserve">
     <value>Technológie</value>
   </data>
-
+  <data name="Tasks" xml:space="preserve">
+    <value>Úlohy</value>
+  </data>
 </root>

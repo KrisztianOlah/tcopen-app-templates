@@ -31,7 +31,8 @@ using System.Threading;
 using MongoDB.Driver;
 using x_template_xTagsDictionary;
 using Vortex.Connector;
-
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 
 namespace x_template_xHmi.Wpf
 {
@@ -163,11 +164,15 @@ namespace x_template_xHmi.Wpf
 
             //  service view for this component will be expanded by default
             x_template_xPlc.MAIN._technology._cu00x._components.MultiAxis.IsExpanded = true;
+            x_template_xPlc.MAIN._technology._cu00x._components.PlsPaletizator.SearchComponentsDepth = 3;
+
+     
 
 
         }
+        // this is usage, should be placed in remote exec
 
-
+    
 
         /// <summary>
         /// this is remontely invoked from plc , 

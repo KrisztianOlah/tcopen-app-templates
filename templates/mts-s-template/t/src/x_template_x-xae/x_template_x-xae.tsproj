@@ -2,6 +2,15 @@
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.55">
 	<DataTypes>
 		<DataType>
+			<Name GUID="{2D719C9F-A498-98FF-B45A-B1CD9E59A10A}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..31] OF USINT</Name>
+			<BitSize>256</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000002}">USINT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>32</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
 			<Name GUID="{A785EC7B-AB96-8684-F3EC-9323F60B420C}" Namespace="TcoIo" AutoDeleteType="true">TcoAmsAddr</Name>
 			<BitSize>64</BitSize>
 			<SubItem>
@@ -36,309 +45,6 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{1B13D499-0647-F4EC-60C3-8FA97D34D869}" AutoDeleteType="true">Status_3035BE2E</Name>
-			<BitSize>80</BitSize>
-			<SubItem>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<BitOffs>8</BitOffs>
-			</SubItem>
-			<SubItem>
-				<BitOffs>16</BitOffs>
-			</SubItem>
-			<SubItem>
-				<BitOffs>24</BitOffs>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-		</DataType>
-		<DataType>
-			<SubItem>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<BitOffs>8</BitOffs>
-			</SubItem>
-			<SubItem>
-				<BitOffs>16</BitOffs>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-				<BitOffs>32</BitOffs>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<Properties>
-				<Property>
-				</Property>
-			</Properties>
-		</DataType>
-		<DataType>
-				<Name>Latch_extern_valid</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Set_counter_done</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Counter_underflow</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Counter_overflow</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Extrapolation_stall</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>32</BitOffs>
-				<Name>Status_of_input_A</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>40</BitOffs>
-				<Name>Status_of_input_B</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>48</BitOffs>
-				<Name>Status_of_extern_latch</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>56</BitOffs>
-				<Name>Sync_error</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>64</BitOffs>
-				<Name>TxPDO_Toggle</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>72</BitOffs>
-			<Properties>
-				<Property>
-					<Name>GeneratedUsingTerminal: EL7342-0000-0022</Name>
-				</Property>
-			</Properties>
-			<Name GUID="{DD92DB1E-2CD5-4444-DF01-EC926C6E944B}" AutoDeleteType="true">Status_B6795845</Name>
-			<BitSize>88</BitSize>
-				<Name>Ready_to_enable</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Ready</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Warning</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Error</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>24</BitOffs>
-				<Name>Moving_positive</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Moving_negative</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>40</BitOffs>
-				<Name>Torque_reduced</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>48</BitOffs>
-				<Name>Digital_input_1</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>56</BitOffs>
-				<Name>Digital_input_2</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>64</BitOffs>
-				<Name>Sync_error</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>72</BitOffs>
-				<Name>TxPDO_Toggle</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>80</BitOffs>
-					<Name>GeneratedUsingTerminal: EL7342-0000-0022</Name>
-			<Name GUID="{40C24555-DEF2-9415-2EF6-B9438A4D2B02}" AutoDeleteType="true">Status_3D84275F</Name>
-			<BitSize>64</BitSize>
-			<SubItem>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<BitOffs>8</BitOffs>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-				<BitOffs>32</BitOffs>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-			<SubItem>
-			</SubItem>
-				<Name>Transmit_accepted</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Receive_request</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Init_accepted</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>16</BitOffs>
-				<Name>Buffer_full</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>24</BitOffs>
-				<Name>Parity_error</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<Name>Framing_error</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>40</BitOffs>
-				<Name>Overrun_error</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>48</BitOffs>
-				<Name>Input_length</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000002}">USINT</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>56</BitOffs>
-			<Properties>
-				<Property>
-					<Name>GeneratedUsingTerminal: EL6001-0000-0020</Name>
-				</Property>
-			</Properties>
-		</DataType>
-		<DataType>
-			<Name GUID="{CB182E9B-438F-9DEC-C42C-37428084161D}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..21] OF USINT</Name>
-			<BitSize>176</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000002}">USINT</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>22</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{C881E7F2-0BCE-2290-23F5-BFD9FF9B0E4F}" AutoDeleteType="true">Control_F189B737</Name>
-			<BitSize>24</BitSize>
-			<SubItem>
-				<Name>Enable_latch_extern_on_positive_edge</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Set_counter</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>8</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Enable_latch_extern_on_negative_edge</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>16</BitOffs>
-			</SubItem>
-			<Properties>
-				<Property>
-					<Name>GeneratedUsingTerminal: EL7342-0000-0022</Name>
-				</Property>
-			</Properties>
-		</DataType>
-		<DataType>
-			<Name GUID="{98617FB3-3A40-BCFA-E597-4AE1FB02C701}" AutoDeleteType="true">Control_C948E0F2</Name>
-			<BitSize>24</BitSize>
-			<SubItem>
-				<Name>Enable</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Reset</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>8</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Reduce_torque</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>16</BitOffs>
-			</SubItem>
-			<Properties>
-				<Property>
-					<Name>GeneratedUsingTerminal: EL7342-0000-0022</Name>
-				</Property>
-			</Properties>
-		</DataType>
-		<DataType>
-			<Name GUID="{2341A65B-C461-99F9-C919-25ED25ED75D9}" AutoDeleteType="true">Ctrl_71604E86</Name>
-			<BitSize>40</BitSize>
-			<SubItem>
-				<Name>Transmit_request</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Receive_accepted</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>8</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Init_request</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>16</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Send_continues</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>24</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Output_length</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000002}">USINT</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>32</BitOffs>
-			</SubItem>
-			<Properties>
-				<Property>
-					<Name>GeneratedUsingTerminal: EL6001-0000-0020</Name>
-				</Property>
-			</Properties>
-		</DataType>
-		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
 			<BitSize>1</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
@@ -402,66 +108,12 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
-			<BitSize>1</BitSize>
+			<Name GUID="{18071995-0000-0000-0000-00200000001B}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..26] OF BIT</Name>
+			<BitSize>27</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
 				<LBound>0</LBound>
-				<Elements>1</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
-			<BitSize>2</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>2</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000003}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..2] OF BIT</Name>
-			<BitSize>3</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>3</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000008}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BYTE</Name>
-			<BitSize>8</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>1</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000004}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..3] OF BIT</Name>
-			<BitSize>4</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>4</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000005}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..4] OF BIT</Name>
-			<BitSize>5</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>5</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000006}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..5] OF BIT</Name>
-			<BitSize>6</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>6</Elements>
+				<Elements>27</Elements>
 			</ArrayInfo>
 		</DataType>
 	</DataTypes>
@@ -473,6 +125,17 @@
 		<ImageData Id="1004">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ff808080808080808080808080808080808080808080808080808080808080808080808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffc0c0c0c0c0c0000000000000000000000000000000000000000000c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c00000000000000000000000000000000000000000000000ffc0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0000000000000000000000000000000000000000000c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0000000000000000000000000c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0808080</ImageData>
 		<ImageData Id="1005">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ff000000000000ff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ff000000000000ff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
 		<ImageData Id="1006">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1007">424de6000000000000007600000028000000100000000e000000010004000000000070000000c40e0000c40e0000100000001000000000000000ff0000000084000084848400c6c6c6000000ff00ff00ff0000ffff00ffffff00ffffff00ffffff00ffffff00ffffff00ffffff00ffffff00ffffff0066333333333336666644444340403666664004434747366666405443444436666640044340403666664004434141366666400453444436666640042340403666664444444545366600044544444436660644454440403666004555554444366606444544424236660004454444443666</ImageData>
+		<ImageData Id="1008">424dba030000000000003a00000028000000100000000e000000010020000000000080030000000000000000000000000000000000000df0adbaff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff008080800080808000808080008080800080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000ffff00c0c0c00000ffff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000ff000000c0c0c000ff00000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000ff00c0c0c0000000ff00c0c0c0000000ff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000ff00c0c0c00000800000c0c0c0000080000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00</ImageData>
+		<ImageData Id="1009">424de6000000000000007600000028000000100000000e000000010004000000000070000000120b0000120b0000100000001000000000000000000080000080000000808000800000008000800080800000c0c0c000808080000000ff0000ff000000ffff00ff000000ff00ff00ffff0000ffffff00888888888888888d707087070870708d7b7b87b7b87b7b8d777787777877778d707087070870708d7c7c87c7c87c7c8d777787777877778d707087070870708d797987979879798d777787777877778d707087070870708d777787777877778d727287272872728d777787777877778d</ImageData>
+		<ImageData Id="1010">424dba030000000000003a00000028000000100000000e000000010020000000000080030000000000000000000000000000000000000df0adbaff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff008080800080808000808080008080800080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000ffff00c0c0c00000ffff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000ff000000c0c0c000ff00000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff00c0c0c0000000ff00c0c0c0000000ff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff00c0c0c00000800000c0c0c0000080000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ffff0000ffff0000ffff0000ffff0000ffff0000ffff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00</ImageData>
+		<ImageData Id="1011">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1012">424dd6020000000000003600000028000000100000000e0000000100180000000000a002000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff008000008000008000008000008000008000c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff008000008000008000008000008000008000c0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff008000008000008000008000008000008000c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff008000008000008000008000008000008000c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff008000008000008000008000008000008000c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff008000008000008000008000008000008000c0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff008000008000008000008000008000008000c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1013">424dd6020000000000003600000028000000100000000e0000000100180000000000a002000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffc080ffc080ffc080ffc080ffc080ffc080ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffc080ffc080ffc080ffc080ffc080ffc080ffc0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ffc080ffc080ffc080ffc080ffc080ffc080ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffc080ffc080ffc080ffc080ffc080ffc080ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffc080ffc080ffc080ffc080ffc080ffc080ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffc080ffc080ffc080ffc080ffc080ffc080ffc0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ffc080ffc080ffc080ffc080ffc080ffc080ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1014">424dba030000000000003a00000028000000100000000e000000010020000000000080030000000000000000000000000000000000000df0adbaff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff008080800080808000808080008080800080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000ffff00c0c0c00000ffff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000ff000000c0c0c000ff00000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c0000000ff00c0c0c0000000ff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c00000800000c0c0c0000080000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00</ImageData>
+		<ImageData Id="1015">424dba030000000000003a00000028000000100000000e000000010020000000000080030000000000000000000000000000000000000df0adbaff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff008080800080808000808080008080800080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000ffff00c0c0c00000ffff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000ff000000c0c0c000ff00000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c0000000ff00c0c0c0000000ff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c00000800000c0c0c0000080000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00</ImageData>
+		<ImageData Id="1016">424de6000000000000007600000028000000100000000e000000010004000000000070000000c30e0000c30e000010000000100000000000ff00ff00ff00ff000000ffff000000ff000000ffff0000008000800080008000000080800000008000000080800080808000c0c0c000ffffff0000000000111111111111111100ffffffffffffff00fffffffffff00ffffffffffffff00ffff00fff00fffffffff00fff00fffffffffffffffffff44f00fffffffffff44f00ffffffffffffffdddddd1111111111dddddd1111111111dddddd1111111111dddddd1111111111dddddd1111111111</ImageData>
+		<ImageData Id="1017">424de6000000000000007600000028000000100000000e000000010004000000000070000000c30e0000c30e000010000000100000000000ff00ff00ff00ff000000ffff000000ff000000ffff0000008000800080008000000080800000008000000080800080808000c0c0c000ffffff00000000001111111111111111fffffffffffffffffcfcfcfcfffff00ff4f4f4f4fffff00ffffffffffffffffffffffffffffffffffcfcfcfcfffff00ff4f4f4f4fffff00fffffffffffffffff55555511111111115555551111111111555555111111111155555511111111115555551111111111</ImageData>
 	</ImageDatas>
 	<Project ProjectGUID="{81535540-06FC-4400-AD30-5DF785BB9A0E}" TargetNetId="192.168.4.1.1.1" Target64Bit="true" ShowHideConfigurations="#x106">
 		<System>
@@ -488,298 +151,501 @@
 		</System>
 		<Plc>
 			<Project GUID="{1F826822-78EF-46D2-B0C2-A803A090596D}" Name="x_template_xPlc" PrjFilePath="x_template_xPlc\x_template_xPlc.plcproj" TmcFilePath="x_template_xPlc\x_template_xPlc.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="x_template_xPlc\x_template_xPlc.tmc" TmcHash="{7D74D1E8-104C-D873-49C2-598E97656C6D}">
-
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="x_template_xPlc\x_template_xPlc.tmc" TmcHash="{A3FF7556-ACF9-4151-0031-F5F608A62F89}">
 					<Name>x_template_xPlc Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.EC_EK1122.InfoData.State</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.InfoData.State</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.PN_EL6631.InfoData.AdsAddr</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I</Name>
+							<Type GUID="{2D719C9F-A498-98FF-B45A-B1CD9E59A10A}">ARRAY [0..31] OF USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.IO_1_8</Name>
+							<Type>BYTE</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.IO_9_10</Name>
+							<Type>BYTE</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.ValveExtSupplyDiag_1_6</Name>
+							<Type>BYTE</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Undervoltage_UA</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.UA_OFF</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Undervoltage_UL</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.UL_OFF</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Undervoltage_5V</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.CommonValve</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Configuration_Error_Valve</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Configuration_Error_IO_Module</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Switchcounter_Error</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Configuratipn_Error_SLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Heardbeat_x</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Unknown_Module_ID</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Count_IO_Module_to_big</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.WcState.WcState</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.WcState.InputToggle</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.InfoData.AdsAddr</Name>
 							<Type GUID="{A785EC7B-AB96-8684-F3EC-9323F60B420C}" Namespace="TcoIo">TcoAmsAddr</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.PN_EL6631.InfoData.AoeNetId</Name>
-							<Type GUID="{132E66EA-9D48-518D-E919-C407F4B9DB22}" Namespace="TcoIo">TcoAmsNetId</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.PN_EL6631.InfoData.State</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.InfoData.State</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_1.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_2.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_3.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_4.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_5.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_6.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_7.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_8.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_9.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_10.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_11.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_12.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_13.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_14.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_15.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_16.Input</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.WcState.WcState</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.WcState.InputToggle</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.IA1_EL1809.InfoData.State</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB.InfoData.State</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.WcState.WcState</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_1.Input</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.InfoData.State</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_6_EL4004.WcState.WcState</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_2.Input</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_6_EL4004.InfoData.AdsAddr</Name>
-							<Type GUID="{A785EC7B-AB96-8684-F3EC-9323F60B420C}" Namespace="TcoIo">TcoAmsAddr</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_6_EL4004.InfoData.State</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status</Name>
-							<Type GUID="{1B13D499-0647-F4EC-60C3-8FA97D34D869}">Status_3035BE2E</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Counter_value</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Latch_value</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status</Name>
-							<Type GUID="{1B13D499-0647-F4EC-60C3-8FA97D34D869}">Status_3035BE2E</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Counter_value</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Latch_value</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status</Name>
-							<Type GUID="{DD92DB1E-2CD5-4444-DF01-EC926C6E944B}">Status_B6795845</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status</Name>
-							<Type GUID="{DD92DB1E-2CD5-4444-DF01-EC926C6E944B}">Status_B6795845</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.WcState.WcState</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_3.Input</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.WcState.InputToggle</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_4.Input</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.AdsAddr</Name>
-							<Type GUID="{A785EC7B-AB96-8684-F3EC-9323F60B420C}" Namespace="TcoIo">TcoAmsAddr</Type>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_5.Input</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.Chn0</Name>
-							<Type>USINT</Type>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_6.Input</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.Chn1</Name>
-							<Type>USINT</Type>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_7.Input</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.Chn2</Name>
-							<Type>USINT</Type>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_8.Input</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.Chn3</Name>
-							<Type>USINT</Type>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_9.Input</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.State</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_10.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_11.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_12.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_13.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_14.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_15.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.Channel_16.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.WcState.WcState</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.WcState.InputToggle</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB21.InfoData.State</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_8_EL4004.WcState.WcState</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_1.Input</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_8_EL4004.InfoData.AdsAddr</Name>
-							<Type GUID="{A785EC7B-AB96-8684-F3EC-9323F60B420C}" Namespace="TcoIo">TcoAmsAddr</Type>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_2.Input</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_8_EL4004.InfoData.State</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_3.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_4.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_5.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_6.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_7.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_8.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_9.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_10.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_11.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_12.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_13.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_14.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_15.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.Channel_16.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.WcState.WcState</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.WcState.InputToggle</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB22.InfoData.State</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Status</Name>
-							<Type GUID="{40C24555-DEF2-9415-2EF6-B9438A4D2B02}">Status_3D84275F</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In</Name>
-							<Type GUID="{CB182E9B-438F-9DEC-C42C-37428084161D}">ARRAY [0..21] OF USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_9_EL6001.WcState.WcState</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.Channel_1.Input</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_9_EL6001.WcState.InputToggle</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.Channel_2.Input</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_9_EL6001.InfoData.AdsAddr</Name>
-							<Type GUID="{A785EC7B-AB96-8684-F3EC-9323F60B420C}" Namespace="TcoIo">TcoAmsAddr</Type>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.Channel_3.Input</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_9_EL6001.InfoData.State</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.Channel_4.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.Channel_5.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.Channel_6.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.Channel_7.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.Channel_8.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.WcState.WcState</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.WcState.InputToggle</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB23.InfoData.State</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.SyncUnits._default.unreferenced.WcState.WcState</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.Channel_1.Input</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.SyncUnits._default.unreferenced.InfoData.ObjectId</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.Channel_2.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.Channel_3.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.Channel_4.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.Channel_5.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.Channel_6.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.Channel_7.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.Channel_8.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.WcState.WcState</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.WcState.InputToggle</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.AB24.InfoData.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_1.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_2.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_3.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_4.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_5.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_6.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_7.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_8.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_9.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_10.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_11.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_12.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_13.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_14.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_15.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.Channel_16.Input</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.WcState.WcState</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.WcState.InputToggle</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.IA1.InfoData.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.QA1.WcState.WcState</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.QA1.InfoData.State</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.SyncUnits._default.unreferenced.WcState.WcState</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.SyncUnits._default.unreferenced.InfoData.ObjectId</Name>
 							<Type>DWORD</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.SyncUnits._default.unreferenced.InfoData.State</Name>
+							<Name>GVL_iXlinker.EC.SyncUnits._default.unreferenced.InfoData.State</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.SyncUnits._default.unreferenced.InfoData.SlaveCount</Name>
+							<Name>GVL_iXlinker.EC.SyncUnits._default.unreferenced.InfoData.SlaveCount</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.SyncUnits._default.PlcTask.WcState.WcState</Name>
+							<Name>GVL_iXlinker.EC.SyncUnits._default.PlcTask.WcState.WcState</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.SyncUnits._default.PlcTask.InfoData.ObjectId</Name>
+							<Name>GVL_iXlinker.EC.SyncUnits._default.PlcTask.InfoData.ObjectId</Name>
 							<Type>DWORD</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.SyncUnits._default.PlcTask.InfoData.State</Name>
+							<Name>GVL_iXlinker.EC.SyncUnits._default.PlcTask.InfoData.State</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.SyncUnits._default.PlcTask.InfoData.SlaveCount</Name>
+							<Name>GVL_iXlinker.EC.SyncUnits._default.PlcTask.InfoData.SlaveCount</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.Inputs.SlaveCount</Name>
+							<Name>GVL_iXlinker.EC.Inputs.SlaveCount</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.Inputs.DevState</Name>
+							<Name>GVL_iXlinker.EC.Inputs.DevState</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.Inputs.Frm0State</Name>
+							<Name>GVL_iXlinker.EC.Inputs.Frm0State</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.Inputs.Frm0WcState</Name>
+							<Name>GVL_iXlinker.EC.Inputs.Frm0WcState</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.Inputs.Frm0InputToggle</Name>
+							<Name>GVL_iXlinker.EC.Inputs.Frm0InputToggle</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.InfoData.ChangeCount</Name>
+							<Name>GVL_iXlinker.EC.InfoData.ChangeCount</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.InfoData.DevId</Name>
+							<Name>GVL_iXlinker.EC.InfoData.DevId</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.InfoData.AmsNetId</Name>
+							<Name>GVL_iXlinker.EC.InfoData.AmsNetId</Name>
 							<Type GUID="{132E66EA-9D48-518D-E919-C407F4B9DB22}" Namespace="TcoIo">TcoAmsNetId</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.InfoData.CfgSlaveCount</Name>
+							<Name>GVL_iXlinker.EC.InfoData.CfgSlaveCount</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.InfoData.DcToTcTimeOffset</Name>
+							<Name>GVL_iXlinker.EC.InfoData.DcToTcTimeOffset</Name>
 							<Type>LINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.InfoData.DcToExtTimeOffset</Name>
+							<Name>GVL_iXlinker.EC.InfoData.DcToExtTimeOffset</Name>
 							<Type>LINT</Type>
 						</Var>
 						<Var>
@@ -830,151 +696,99 @@
 					<Vars VarGrpType="2" AreaNo="1">
 						<Name>PlcTask Outputs</Name>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_1.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O</Name>
+							<Type GUID="{2D719C9F-A498-98FF-B45A-B1CD9E59A10A}">ARRAY [0..31] OF USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_Control.Web_App_Disable</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_2.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_Control.Freeze_Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_3.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_Control.HL_Swap</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_4.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.EK.PNEU.Device_Control.Default_Modul_Control</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_5.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_1.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_6.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_2.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_7.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_3.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_8.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_4.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_9.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_5.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_10.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_6.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_11.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_7.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_12.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_8.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_13.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_9.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_14.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_10.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_15.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_11.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_16.Output</Name>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_12.Output</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_6_EL4004.AO_Outputs_Channel_1.Analog_output</Name>
-							<Type>INT</Type>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_13.Output</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_6_EL4004.AO_Outputs_Channel_2.Analog_output</Name>
-							<Type>INT</Type>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_14.Output</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_6_EL4004.AO_Outputs_Channel_3.Analog_output</Name>
-							<Type>INT</Type>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_15.Output</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_6_EL4004.AO_Outputs_Channel_4.Analog_output</Name>
-							<Type>INT</Type>
+							<Name>GVL_iXlinker.EC.EC.QA1.Channel_16.Output</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_1.Control</Name>
-							<Type GUID="{C881E7F2-0BCE-2290-23F5-BFD9FF9B0E4F}">Control_F189B737</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_1.Set_counter_value</Name>
+							<Name>GVL_iXlinker.EC.Outputs.DevCtrl</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_2.Control</Name>
-							<Type GUID="{C881E7F2-0BCE-2290-23F5-BFD9FF9B0E4F}">Control_F189B737</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_2.Set_counter_value</Name>
+							<Name>GVL_iXlinker.EC.Outputs.Frm0Ctrl</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Control_Channel_1.Control</Name>
-							<Type GUID="{98617FB3-3A40-BCFA-E597-4AE1FB02C701}">Control_C948E0F2</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Velocity_Channel_1.Velocity</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Control_Channel_2.Control</Name>
-							<Type GUID="{98617FB3-3A40-BCFA-E597-4AE1FB02C701}">Control_C948E0F2</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Velocity_Channel_2.Velocity</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_8_EL4004.AO_Outputs_Channel_1.Analog_output</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_8_EL4004.AO_Outputs_Channel_2.Analog_output</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_8_EL4004.AO_Outputs_Channel_3.Analog_output</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_8_EL4004.AO_Outputs_Channel_4.Analog_output</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Ctrl</Name>
-							<Type GUID="{2341A65B-C461-99F9-C919-25ED25ED75D9}">Ctrl_71604E86</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out</Name>
-							<Type GUID="{CB182E9B-438F-9DEC-C42C-37428084161D}">ARRAY [0..21] OF USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.Outputs.DevCtrl</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.Outputs.Frm0Ctrl</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_iXlinker.EC1.Outputs.Frm0WcCtrl</Name>
+							<Name>GVL_iXlinker.EC.Outputs.Frm0WcCtrl</Name>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
@@ -993,7 +807,7 @@
 					<UnrestoredVarLinks ImportTime="2023-03-27T10:36:05">
 						<OwnerA Name="InputDst" Prefix="TIPC^x_template_xPlc^x_template_xPlc Instance" Type="1">
 							<OwnerB Name="TIID^EC1">
-								<Link VarA="GVL_iXlinker.EC1.InfoData.AmsNetId" TypeA="AMSNETID" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000041}" VarB="InfoData^AmsNetId" RestoreInfo="TypeMismatch" OldTypeA="AMSNETID" OldGuidA="{18071995-0000-0000-0000-000000000041}" NewTypeA="TcoIo.TcoAmsNetId" NewGuidA="{132E66EA-9D48-518D-E919-C407F4B9DB22}"/>
+								<Link VarA="GVL_iXlinker.EC1.InfoData.AmsNetId" TypeA="AMSNETID" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000041}" VarB="InfoData^AmsNetId" RestoreInfo="TypeMismatch"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -1046,7 +860,7 @@
 					<Name>Image</Name>
 				</Image>
 				<Box Id="1" BoxType="9099">
-					<Name> (EK1200)</Name>
+					<Name>(EK1200)</Name>
 					<ImageId>1000</ImageId>
 					<EtherCAT PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04b02c52" RevisionNo="#x00001388" InfoDataState="false" PortPhys="49" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1200-5000 EtherCAT Power supply (2A E-Bus)" Desc="EK1200" PortABoxInfo="#x00ffffff"/>
 					<Box Id="2" BoxType="9099">
@@ -1057,7 +871,7 @@
 					<Box Id="3" BoxType="9106" BoxFlags="#x00000020">
 						<Name>PN (EL6631)</Name>
 						<ImageId>124</ImageId>
-						<EtherCAT SlaveType="5" AdsServerAddress="c0a8040107040000" FixedAdsServerNetId="true" PdiType="#x0c08" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="47" FoeType="1" VendorId="#x00000002" ProductCode="#x19e73052" RevisionNo="#x00120000" InfoDataAddr="true" InfoDataNetId="true" TimeoutStateChange1="10000" TimeoutStateChange3="20000" GenerateOwnNetId="true" InitializeOwnNetId="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6631 PROFINET IO Controller" Desc="EL6631" PortABoxInfo="#x02000002">
+						<EtherCAT SlaveType="5" AdsServerAddress="c0a8040107040000" PdiType="#x0c08" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="47" FoeType="1" VendorId="#x00000002" ProductCode="#x19e73052" RevisionNo="#x00120000" InfoDataAddr="true" InfoDataNetId="true" TimeoutStateChange1="10000" TimeoutStateChange3="20000" GenerateOwnNetId="true" InitializeOwnNetId="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6631 PROFINET IO Controller" Desc="EL6631" PortABoxInfo="#x02000002">
 							<SyncMan>001000042600010001000000400000040004001026010000</SyncMan>
 							<SyncMan>001400042200010002000000400000040004001422010000</SyncMan>
 							<SyncMan>001800006400000003000000000000000000001864010000</SyncMan>
@@ -2871,229 +2685,1137 @@
 				</Box>
 				<EtherCAT/>
 			</Device>
+			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="192.168.4.1.2.1" RemoteName="EC" InfoImageId="3">
+				<Name>EC</Name>
+				<AddressInfo>
+					<Ccat>
+						<Address>-264241152</Address>
+						<Offset>131072</Offset>
+						<Size>8192</Size>
+						<BaseAddr>0</BaseAddr>
+						<BusNo>3</BusNo>
+						<SlotNo>0</SlotNo>
+						<VendorId>5612</VendorId>
+						<DeviceId>20480</DeviceId>
+						<Dma>
+							<Address>0</Address>
+							<Offset>4096</Offset>
+							<Size>12288</Size>
+							<BaseAddr>2</BaseAddr>
+							<RxChn>0</RxChn>
+							<TxChn>1</TxChn>
+						</Dma>
+						<Identification>
+							<Value>1795167326</Value>
+							<Version>1</Version>
+							<Size>256</Size>
+						</Identification>
+					</Ccat>
+				</AddressInfo>
+				<Image Id="2" AddrType="9" ImageType="3">
+					<Name>Image</Name>
+				</Image>
+				<Box Id="11" BoxType="9099">
+					<Name>EC</Name>
+					<ImageId>1000</ImageId>
+					<EtherCAT PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04b02c52" RevisionNo="#x00001388" InfoDataState="false" PortPhys="49" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1200-5000 EtherCAT Power supply (2A E-Bus)" Desc="EK1200" PortABoxInfo="#x00ffffff"/>
+					<Box Id="12" BoxType="9099">
+						<Name>EK</Name>
+						<ImageId>1001</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04622c52" RevisionNo="#x00120000" PortPhys="4883" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1122 2 port EtherCAT junction" Desc="EK1122" PortABoxInfo="#x0100000b"/>
+						<Box Id="13" BoxType="9099" BoxFlags="#x00000020">
+							<Name>PNEU</Name>
+							<ImageId>1007</ImageId>
+							<EtherCAT SlaveType="2" PdiType="#x0006" MboxDataLinkLayer="true" CycleMBoxPolling="true" Unsupported64BitDc="true" CoeType="55" EoeType="3" FoeType="1" VendorId="#x000001b2" ProductCode="#x000f9ddd" RevisionNo="#x00010002" SerialNo="#x80000001" InfoDataAddr="true" DownloadSlotCfg="true" PortPhys="17" IdentificationAdo="308" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="AES Fieldbus Coupler Gen2" Desc="AES-D-BC-ECAT Gen2" PortABoxInfo="#x0300000c">
+								<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
+								<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
+								<SyncMan>001124006400010003000000000000040000001164010000</SyncMan>
+								<SyncMan>001d24002000010004000000000000040000001d20010000</SyncMan>
+								<Fmmu>0000000000000000001100020100000001000000000000000000000000000000</Fmmu>
+								<Fmmu>0000000000000000001d00010100000002000000000000000000000000000000</Fmmu>
+								<SwitchPortData>0100000000000000000000000000000000000000426f785f31335f5f4145535f445f420000000000000000000000000000000000000000000000000000000000</SwitchPortData>
+								<DcMode>44634f66660000000000000000000000444320756e757365640000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000</DcMode>
+								<DcMode>446353796e633000000000000000000044432053796e633020666f722073796e6368726f6e697a6174696f6e00000000000000000000000000000000000000030100000000000000000000000000000000000000000000000000000000000000</DcMode>
+								<Pdo Name="Device_State" Index="#x1aff" Flags="#x0000" SyncMan="3">
+									<Entry Name="IO:1-8" Index="#xf100" Sub="#x01">
+										<Type>BIT8</Type>
+									</Entry>
+									<Entry Name="IO:9-10" Index="#xf100" Sub="#x02">
+										<Type>BIT2</Type>
+									</Entry>
+									<Entry Name="ValveExtSupplyDiag:1-6" Index="#xf100" Sub="#x03">
+										<Type>BIT6</Type>
+									</Entry>
+									<Entry Name="Undervoltage UA" Index="#xf100" Sub="#x04">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="UA OFF" Index="#xf100" Sub="#x05">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="Undervoltage UL" Index="#xf100" Sub="#x06">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="UL OFF" Index="#xf100" Sub="#x07">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="Undervoltage 5V" Index="#xf100" Sub="#x08">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry>
+										<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+									</Entry>
+									<Entry Name="CommonValve" Index="#xf100" Sub="#x0a">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="Configuration Error Valve" Index="#xf100" Sub="#x0b">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="Configuration Error IO-Module" Index="#xf100" Sub="#x0c">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="Switchcounter Error" Index="#xf100" Sub="#x0d">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="Configuratipn Error SLS" Index="#xf100" Sub="#x0e">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry>
+										<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+									</Entry>
+									<Entry Name="Heardbeat" Index="#xf100" Sub="#x10">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="Unknown Module ID" Index="#xf100" Sub="#x11">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="Count IO-Module to big" Index="#xf100" Sub="#x12">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Device_Control" Index="#x16ff" InOut="1" Flags="#x0000" SyncMan="2">
+									<Entry>
+										<Type GUID="{18071995-0000-0000-0000-00200000001B}">ARRAY [0..26] OF BIT</Type>
+									</Entry>
+									<Entry Name="Web App Disable" Index="#xf200" Sub="#x02">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry>
+										<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+									</Entry>
+									<Entry Name="Freeze Output" Index="#xf200" Sub="#x04">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="HL_Swap" Index="#xf200" Sub="#x05">
+										<Type>BIT</Type>
+									</Entry>
+									<Entry Name="Default_Modul_Control" Index="#xf200" Sub="#x06">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Inputs" Index="#x1a80" Flags="#x0290" SyncMan="3">
+									<Entry Name="digital Data I_0" Index="#x6100" Sub="#x01" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_1" Index="#x6100" Sub="#x02" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_2" Index="#x6100" Sub="#x03" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_3" Index="#x6100" Sub="#x04" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_4" Index="#x6100" Sub="#x05" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_5" Index="#x6100" Sub="#x06" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_6" Index="#x6100" Sub="#x07" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_7" Index="#x6100" Sub="#x08" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_8" Index="#x6100" Sub="#x09" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_9" Index="#x6100" Sub="#x0a" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_10" Index="#x6100" Sub="#x0b" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_11" Index="#x6100" Sub="#x0c" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_12" Index="#x6100" Sub="#x0d" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_13" Index="#x6100" Sub="#x0e" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_14" Index="#x6100" Sub="#x0f" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_15" Index="#x6100" Sub="#x10" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_16" Index="#x6100" Sub="#x11" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_17" Index="#x6100" Sub="#x12" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_18" Index="#x6100" Sub="#x13" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_19" Index="#x6100" Sub="#x14" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_20" Index="#x6100" Sub="#x15" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_21" Index="#x6100" Sub="#x16" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_22" Index="#x6100" Sub="#x17" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_23" Index="#x6100" Sub="#x18" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_24" Index="#x6100" Sub="#x19" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_25" Index="#x6100" Sub="#x1a" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_26" Index="#x6100" Sub="#x1b" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_27" Index="#x6100" Sub="#x1c" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_28" Index="#x6100" Sub="#x1d" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_29" Index="#x6100" Sub="#x1e" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_30" Index="#x6100" Sub="#x1f" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data I_31" Index="#x6100" Sub="#x20" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Outputs" Index="#x1680" InOut="1" Flags="#x0290" SyncMan="2">
+									<Entry Name="digital Data O_0" Index="#x7100" Sub="#x01" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_1" Index="#x7100" Sub="#x02" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_2" Index="#x7100" Sub="#x03" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_3" Index="#x7100" Sub="#x04" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_4" Index="#x7100" Sub="#x05" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_5" Index="#x7100" Sub="#x06" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_6" Index="#x7100" Sub="#x07" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_7" Index="#x7100" Sub="#x08" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_8" Index="#x7100" Sub="#x09" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_9" Index="#x7100" Sub="#x0a" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_10" Index="#x7100" Sub="#x0b" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_11" Index="#x7100" Sub="#x0c" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_12" Index="#x7100" Sub="#x0d" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_13" Index="#x7100" Sub="#x0e" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_14" Index="#x7100" Sub="#x0f" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_15" Index="#x7100" Sub="#x10" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_16" Index="#x7100" Sub="#x11" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_17" Index="#x7100" Sub="#x12" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_18" Index="#x7100" Sub="#x13" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_19" Index="#x7100" Sub="#x14" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_20" Index="#x7100" Sub="#x15" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_21" Index="#x7100" Sub="#x16" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_22" Index="#x7100" Sub="#x17" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_23" Index="#x7100" Sub="#x18" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_24" Index="#x7100" Sub="#x19" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_25" Index="#x7100" Sub="#x1a" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_26" Index="#x7100" Sub="#x1b" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_27" Index="#x7100" Sub="#x1c" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_28" Index="#x7100" Sub="#x1d" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_29" Index="#x7100" Sub="#x1e" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_30" Index="#x7100" Sub="#x1f" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+									<Entry Name="digital Data O_31" Index="#x7100" Sub="#x20" Flags="#x00001000">
+										<Type>USINT</Type>
+									</Entry>
+								</Pdo>
+								<CoeProfile ProfileNo="5001"/>
+								<Slot Name="Valves">
+									<SlotData>0000010001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="valve" Name="Valves" VendorId="434" ImageId="1008"/>
+									<Module Id="#x03090001" Type="32 Byte Valve Unit (0x7F)" Class="valve">
+										<Name>Modules</Name>
+										<ImageId>1008</ImageId>
+										<ModuleData>b20100007f000000020000000000000000000000000000000000000000000000</ModuleData>
+										<PdoIndex>6784</PdoIndex>
+										<PdoIndex>5760</PdoIndex>
+									</Module>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<Slot Name="IO-Modules" ImageId="1009">
+									<SlotData>0000000001000400010000001000000000000000000000000000000000000000</SlotData>
+									<ModuleClass Class="dig_in" Name="Digital Input Modules" VendorId="434" ImageId="1010"/>
+									<ModuleClass Class="dig_out" Name="Digital Output Modules" VendorId="434" ImageId="1011"/>
+									<ModuleClass Class="dig_in_out" Name="Digital Input/Output Modules" VendorId="434" ImageId="1008"/>
+									<ModuleClass Class="ana_in" Name="Analogue Input Modules" VendorId="434" ImageId="1012"/>
+									<ModuleClass Class="ana_out" Name="Analogue Output Modules" VendorId="434" ImageId="1013"/>
+									<ModuleClass Class="ana_in_out" Name="Analogue Input/Output Modules" VendorId="434" ImageId="1014"/>
+									<ModuleClass Class="extension" Name="Extension Modules" VendorId="434" ImageId="1015"/>
+								</Slot>
+								<ModulePdoGroup>02000217021b00000000000000000000</ModulePdoGroup>
+								<ModulePdoGroup>02000017001b00000000000000000000</ModulePdoGroup>
+								<ModulePdoGroup>02000117011b00000000000000000000</ModulePdoGroup>
+							</EtherCAT>
+						</Box>
+						<Box Id="14" BoxType="9099">
+							<Name>AB</Name>
+							<ImageId>1016</ImageId>
+							<EtherCAT SlaveType="1" PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x647618a9" RevisionNo="#x00110001" RepeatSupport="true" PortPhys="4369" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EPP1322-0001 3 port EtherCAT P gateway" Desc="EPP1322-0001" PortABoxInfo="#x0100000d"/>
+						</Box>
+						<Box Id="15" BoxType="9099">
+							<Name>AB21</Name>
+							<ImageId>1017</ImageId>
+							<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x64763719" RevisionNo="#x00100015" RepeatSupport="true" PortPhys="17" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EPP1809-0021 16 Ch. Dig. Input 24V, 3ms, M8" Desc="EPP1809-0021" PortABoxInfo="#x0200000e">
+								<SyncMan>001002000000010004000000020002000200001000010000</SyncMan>
+								<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+								<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6000" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6010" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6020" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6030" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6040" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6050" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6060" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6070" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 9" Index="#x1a08" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6080" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 10" Index="#x1a09" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6090" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 11" Index="#x1a0a" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60a0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 12" Index="#x1a0b" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60b0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 13" Index="#x1a0c" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60c0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 14" Index="#x1a0d" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60d0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 15" Index="#x1a0e" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60e0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 16" Index="#x1a0f" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60f0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+							</EtherCAT>
+						</Box>
+						<Box Id="16" BoxType="9099">
+							<Name>AB22</Name>
+							<ImageId>1017</ImageId>
+							<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x64763719" RevisionNo="#x00100015" RepeatSupport="true" PortPhys="17" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EPP1809-0021 16 Ch. Dig. Input 24V, 3ms, M8" Desc="EPP1809-0021" PortABoxInfo="#x0100000f">
+								<SyncMan>001002000000010004000000020002000200001000010000</SyncMan>
+								<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+								<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6000" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6010" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6020" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6030" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6040" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6050" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6060" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6070" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 9" Index="#x1a08" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6080" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 10" Index="#x1a09" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6090" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 11" Index="#x1a0a" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60a0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 12" Index="#x1a0b" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60b0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 13" Index="#x1a0c" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60c0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 14" Index="#x1a0d" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60d0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 15" Index="#x1a0e" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60e0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 16" Index="#x1a0f" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x60f0" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+							</EtherCAT>
+						</Box>
+						<Box Id="17" BoxType="9099">
+							<Name>AB23</Name>
+							<ImageId>1017</ImageId>
+							<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x64760509" RevisionNo="#x00110001" RepeatSupport="true" PortPhys="17" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EPP1008-0001 8 Ch. Dig. Input 24V, 3ms, M8" Desc="EPP1008-0001" PortABoxInfo="#x01000010">
+								<SyncMan>001001000000010004000000010001000100001000010000</SyncMan>
+								<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+								<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6000" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6010" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6020" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6030" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6040" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6050" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6060" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6070" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+							</EtherCAT>
+						</Box>
+						<Box Id="18" BoxType="9099">
+							<Name>AB24</Name>
+							<ImageId>1017</ImageId>
+							<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x64760509" RevisionNo="#x00110001" RepeatSupport="true" PortPhys="17" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EPP1008-0001 8 Ch. Dig. Input 24V, 3ms, M8" Desc="EPP1008-0001" PortABoxInfo="#x01000011">
+								<SyncMan>001001000000010004000000010001000100001000010000</SyncMan>
+								<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+								<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6000" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6010" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6020" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6030" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6040" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6050" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6060" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+								<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+									<Entry Name="Input" Index="#x6070" Sub="#x01">
+										<Type>BIT</Type>
+									</Entry>
+								</Pdo>
+							</EtherCAT>
+						</Box>
+					</Box>
+					<Box Id="19" BoxType="9099">
+						<Name>IA1</Name>
+						<ImageId>7</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07113052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1809 16Ch. Dig. Input 24V, 3ms" Desc="EL1809" PortABoxInfo="#x0200000c">
+							<SyncMan>001002000000010004000000000000000200001000010000</SyncMan>
+							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1a04" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1a05" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1a06" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1a07" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 9" Index="#x1a08" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6080" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 10" Index="#x1a09" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6090" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 11" Index="#x1a0a" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60a0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 12" Index="#x1a0b" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60b0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 13" Index="#x1a0c" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 14" Index="#x1a0d" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60d0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 15" Index="#x1a0e" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60e0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 16" Index="#x1a0f" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x60f0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="20" BoxType="9099">
+						<Name>QA1</Name>
+						<ImageId>1002</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0af93052" RevisionNo="#x0010000f" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2809-0015 16Ch. Dig. Output 24V DC, 0.35A, not short-circuit proof" Desc="EL2809-0015" PortABoxInfo="#x01000013">
+							<SyncMan>000f01004400010003000000000000000100000f44090000</SyncMan>
+							<SyncMan>010f01004400010003000000000000000100010f44090000</SyncMan>
+							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1601" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1602" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1603" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 5" Index="#x1604" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7040" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 6" Index="#x1605" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7050" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 7" Index="#x1606" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7060" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 8" Index="#x1607" InOut="1" Flags="#x0011" SyncMan="0">
+								<Entry Name="Output" Index="#x7070" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 9" Index="#x1608" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x7080" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 10" Index="#x1609" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x7090" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 11" Index="#x160a" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70a0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 12" Index="#x160b" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70b0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 13" Index="#x160c" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 14" Index="#x160d" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70d0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 15" Index="#x160e" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70e0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 16" Index="#x160f" InOut="1" Flags="#x0011" SyncMan="1">
+								<Entry Name="Output" Index="#x70f0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="21" BoxType="9099">
+						<Name>Term 11 (EL9011)</Name>
+						<ImageId>1006</ImageId>
+						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x01000014"/>
+					</Box>
+				</Box>
+				<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120"/>
+			</Device>
 		</Io>
 	</Project>
 	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500820000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500831000403}" Id="#x02030020"/>
 		<OwnerA Name="TIPC^x_template_xPlc^x_template_xPlc Instance">
-			<OwnerB Name="TIID^EC1">
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.InfoData.AmsNetId" VarB="InfoData^AmsNetId"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.InfoData.CfgSlaveCount" VarB="InfoData^CfgSlaveCount"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.InfoData.ChangeCount" VarB="InfoData^ChangeCount"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.InfoData.DevId" VarB="InfoData^DevId"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.Inputs.DevState" VarB="Inputs^DevState"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.Inputs.Frm0InputToggle" VarB="Inputs^Frm0InputToggle"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.Inputs.Frm0State" VarB="Inputs^Frm0State"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.Inputs.Frm0WcState" VarB="Inputs^Frm0WcState"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.Inputs.SlaveCount" VarB="Inputs^SlaveCount"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.SyncUnits._default.PlcTask.InfoData.ObjectId" VarB="SyncUnits^&lt;default&gt;^PlcTask^InfoData^ObjectId"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.SyncUnits._default.PlcTask.InfoData.SlaveCount" VarB="SyncUnits^&lt;default&gt;^PlcTask^InfoData^SlaveCount"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.SyncUnits._default.PlcTask.InfoData.State" VarB="SyncUnits^&lt;default&gt;^PlcTask^InfoData^State"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.SyncUnits._default.PlcTask.WcState.WcState" VarB="SyncUnits^&lt;default&gt;^PlcTask^WcState^WcState"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.Outputs.DevCtrl" VarB="Outputs^DevCtrl"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.Outputs.Frm0Ctrl" VarB="Outputs^Frm0Ctrl"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.Outputs.Frm0WcCtrl" VarB="Outputs^Frm0WcCtrl"/>
+			<OwnerB Name="TIID^EC">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.InfoData.AmsNetId" VarB="InfoData^AmsNetId"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.InfoData.CfgSlaveCount" VarB="InfoData^CfgSlaveCount"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.InfoData.ChangeCount" VarB="InfoData^ChangeCount"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.InfoData.DevId" VarB="InfoData^DevId"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.Inputs.DevState" VarB="Inputs^DevState"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.Inputs.Frm0InputToggle" VarB="Inputs^Frm0InputToggle"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.Inputs.Frm0State" VarB="Inputs^Frm0State"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.Inputs.Frm0WcState" VarB="Inputs^Frm0WcState"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.Inputs.SlaveCount" VarB="Inputs^SlaveCount"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.SyncUnits._default.PlcTask.InfoData.ObjectId" VarB="SyncUnits^&lt;default&gt;^PlcTask^InfoData^ObjectId"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.SyncUnits._default.PlcTask.InfoData.SlaveCount" VarB="SyncUnits^&lt;default&gt;^PlcTask^InfoData^SlaveCount"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.SyncUnits._default.PlcTask.InfoData.State" VarB="SyncUnits^&lt;default&gt;^PlcTask^InfoData^State"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.SyncUnits._default.PlcTask.WcState.WcState" VarB="SyncUnits^&lt;default&gt;^PlcTask^WcState^WcState"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.Outputs.DevCtrl" VarB="Outputs^DevCtrl"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.Outputs.Frm0Ctrl" VarB="Outputs^Frm0Ctrl"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.Outputs.Frm0WcCtrl" VarB="Outputs^Frm0WcCtrl"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EC1^ (EK1200)^EC (EK1122)">
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.EC_EK1122.InfoData.State" VarB="InfoData^State"/>
+			<OwnerB Name="TIID^EC^EC^EK">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.InfoData.State" VarB="InfoData^State"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EC1^ (EK1200)^IA1 (EL1809)">
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_1.Input" VarB="Channel 1^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_10.Input" VarB="Channel 10^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_11.Input" VarB="Channel 11^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_12.Input" VarB="Channel 12^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_13.Input" VarB="Channel 13^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_14.Input" VarB="Channel 14^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_15.Input" VarB="Channel 15^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_16.Input" VarB="Channel 16^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_2.Input" VarB="Channel 2^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_3.Input" VarB="Channel 3^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_4.Input" VarB="Channel 4^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_5.Input" VarB="Channel 5^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_6.Input" VarB="Channel 6^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_7.Input" VarB="Channel 7^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_8.Input" VarB="Channel 8^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.Channel_9.Input" VarB="Channel 9^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.InfoData.State" VarB="InfoData^State"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.WcState.InputToggle" VarB="WcState^InputToggle"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.IA1_EL1809.WcState.WcState" VarB="WcState^WcState"/>
+			<OwnerB Name="TIID^EC^EC^EK^AB">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB.InfoData.State" VarB="InfoData^State"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EC1^ (EK1200)^PN (EL6631)">
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.PN_EL6631.InfoData.AdsAddr" VarB="InfoData^AdsAddr"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.PN_EL6631.InfoData.AoeNetId" VarB="InfoData^AoeNetId"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.PN_EL6631.InfoData.State" VarB="InfoData^State"/>
+			<OwnerB Name="TIID^EC^EC^EK^AB21">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_1.Input" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_10.Input" VarB="Channel 10^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_11.Input" VarB="Channel 11^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_12.Input" VarB="Channel 12^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_13.Input" VarB="Channel 13^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_14.Input" VarB="Channel 14^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_15.Input" VarB="Channel 15^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_16.Input" VarB="Channel 16^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_2.Input" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_3.Input" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_4.Input" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_5.Input" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_6.Input" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_7.Input" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_8.Input" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.Channel_9.Input" VarB="Channel 9^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.InfoData.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.WcState.InputToggle" VarB="WcState^InputToggle"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB21.WcState.WcState" VarB="WcState^WcState"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EC1^ (EK1200)^QA1 (EL2809)">
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.InfoData.State" VarB="InfoData^State"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.WcState.WcState" VarB="WcState^WcState"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_1.Output" VarB="Channel 1^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_10.Output" VarB="Channel 10^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_11.Output" VarB="Channel 11^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_12.Output" VarB="Channel 12^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_13.Output" VarB="Channel 13^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_14.Output" VarB="Channel 14^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_15.Output" VarB="Channel 15^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_16.Output" VarB="Channel 16^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_2.Output" VarB="Channel 2^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_3.Output" VarB="Channel 3^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_4.Output" VarB="Channel 4^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_5.Output" VarB="Channel 5^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_6.Output" VarB="Channel 6^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_7.Output" VarB="Channel 7^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_8.Output" VarB="Channel 8^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.QA1_EL2809.Channel_9.Output" VarB="Channel 9^Output"/>
+			<OwnerB Name="TIID^EC^EC^EK^AB22">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_1.Input" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_10.Input" VarB="Channel 10^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_11.Input" VarB="Channel 11^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_12.Input" VarB="Channel 12^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_13.Input" VarB="Channel 13^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_14.Input" VarB="Channel 14^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_15.Input" VarB="Channel 15^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_16.Input" VarB="Channel 16^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_2.Input" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_3.Input" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_4.Input" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_5.Input" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_6.Input" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_7.Input" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_8.Input" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.Channel_9.Input" VarB="Channel 9^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.InfoData.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.WcState.InputToggle" VarB="WcState^InputToggle"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB22.WcState.WcState" VarB="WcState^WcState"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EC1^ (EK1200)^Term 6 (EL4004)">
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_6_EL4004.InfoData.AdsAddr" VarB="InfoData^AdsAddr"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_6_EL4004.InfoData.State" VarB="InfoData^State"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_6_EL4004.WcState.WcState" VarB="WcState^WcState"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_6_EL4004.AO_Outputs_Channel_1.Analog_output" VarB="AO Outputs Channel 1^Analog output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_6_EL4004.AO_Outputs_Channel_2.Analog_output" VarB="AO Outputs Channel 2^Analog output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_6_EL4004.AO_Outputs_Channel_3.Analog_output" VarB="AO Outputs Channel 3^Analog output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_6_EL4004.AO_Outputs_Channel_4.Analog_output" VarB="AO Outputs Channel 4^Analog output"/>
+			<OwnerB Name="TIID^EC^EC^EK^AB23">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.Channel_1.Input" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.Channel_2.Input" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.Channel_3.Input" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.Channel_4.Input" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.Channel_5.Input" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.Channel_6.Input" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.Channel_7.Input" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.Channel_8.Input" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.InfoData.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.WcState.InputToggle" VarB="WcState^InputToggle"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB23.WcState.WcState" VarB="WcState^WcState"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EC1^ (EK1200)^Term 7 (EL7342)">
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Digital_input_1" VarB="DCM Status Channel 1^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Digital_input_2" VarB="DCM Status Channel 1^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Error" VarB="DCM Status Channel 1^Status^Error"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Moving_negative" VarB="DCM Status Channel 1^Status^Moving negative"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Moving_positive" VarB="DCM Status Channel 1^Status^Moving positive"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Ready" VarB="DCM Status Channel 1^Status^Ready"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Ready_to_enable" VarB="DCM Status Channel 1^Status^Ready to enable"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Sync_error" VarB="DCM Status Channel 1^Status^Sync error"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Torque_reduced" VarB="DCM Status Channel 1^Status^Torque reduced"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^TxPDO_Toggle" VarB="DCM Status Channel 1^Status^TxPDO Toggle"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_1.Status^Warning" VarB="DCM Status Channel 1^Status^Warning"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Digital_input_1" VarB="DCM Status Channel 2^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Digital_input_2" VarB="DCM Status Channel 2^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Error" VarB="DCM Status Channel 2^Status^Error"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Moving_negative" VarB="DCM Status Channel 2^Status^Moving negative"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Moving_positive" VarB="DCM Status Channel 2^Status^Moving positive"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Ready" VarB="DCM Status Channel 2^Status^Ready"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Ready_to_enable" VarB="DCM Status Channel 2^Status^Ready to enable"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Sync_error" VarB="DCM Status Channel 2^Status^Sync error"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Torque_reduced" VarB="DCM Status Channel 2^Status^Torque reduced"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^TxPDO_Toggle" VarB="DCM Status Channel 2^Status^TxPDO Toggle"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Status_Channel_2.Status^Warning" VarB="DCM Status Channel 2^Status^Warning"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Counter_value" VarB="ENC Status compact Channel 1^Counter value"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Latch_value" VarB="ENC Status compact Channel 1^Latch value"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^Counter_overflow" VarB="ENC Status compact Channel 1^Status^Counter overflow"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^Counter_underflow" VarB="ENC Status compact Channel 1^Status^Counter underflow"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^Extrapolation_stall" VarB="ENC Status compact Channel 1^Status^Extrapolation stall"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^Latch_extern_valid" VarB="ENC Status compact Channel 1^Status^Latch extern valid"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^Set_counter_done" VarB="ENC Status compact Channel 1^Status^Set counter done"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^Status_of_extern_latch" VarB="ENC Status compact Channel 1^Status^Status of extern latch"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^Status_of_input_A" VarB="ENC Status compact Channel 1^Status^Status of input A"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^Status_of_input_B" VarB="ENC Status compact Channel 1^Status^Status of input B"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^Sync_error" VarB="ENC Status compact Channel 1^Status^Sync error"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_1.Status^TxPDO_Toggle" VarB="ENC Status compact Channel 1^Status^TxPDO Toggle"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Counter_value" VarB="ENC Status compact Channel 2^Counter value"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Latch_value" VarB="ENC Status compact Channel 2^Latch value"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^Counter_overflow" VarB="ENC Status compact Channel 2^Status^Counter overflow"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^Counter_underflow" VarB="ENC Status compact Channel 2^Status^Counter underflow"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^Extrapolation_stall" VarB="ENC Status compact Channel 2^Status^Extrapolation stall"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^Latch_extern_valid" VarB="ENC Status compact Channel 2^Status^Latch extern valid"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^Set_counter_done" VarB="ENC Status compact Channel 2^Status^Set counter done"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^Status_of_extern_latch" VarB="ENC Status compact Channel 2^Status^Status of extern latch"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^Status_of_input_A" VarB="ENC Status compact Channel 2^Status^Status of input A"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^Status_of_input_B" VarB="ENC Status compact Channel 2^Status^Status of input B"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^Sync_error" VarB="ENC Status compact Channel 2^Status^Sync error"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Status_compact_Channel_2.Status^TxPDO_Toggle" VarB="ENC Status compact Channel 2^Status^TxPDO Toggle"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.AdsAddr" VarB="InfoData^AdsAddr"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.Chn0" VarB="InfoData^Chn0"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.Chn1" VarB="InfoData^Chn1"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.Chn2" VarB="InfoData^Chn2"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.Chn3" VarB="InfoData^Chn3"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.InfoData.State" VarB="InfoData^State"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.WcState.InputToggle" VarB="WcState^InputToggle"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.WcState.WcState" VarB="WcState^WcState"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Control_Channel_1.Control^Enable" VarB="DCM Control Channel 1^Control^Enable"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Control_Channel_1.Control^Reduce_torque" VarB="DCM Control Channel 1^Control^Reduce torque"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Control_Channel_1.Control^Reset" VarB="DCM Control Channel 1^Control^Reset"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Control_Channel_2.Control^Enable" VarB="DCM Control Channel 2^Control^Enable"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Control_Channel_2.Control^Reduce_torque" VarB="DCM Control Channel 2^Control^Reduce torque"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Control_Channel_2.Control^Reset" VarB="DCM Control Channel 2^Control^Reset"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Velocity_Channel_1.Velocity" VarB="DCM Velocity Channel 1^Velocity"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.DCM_Velocity_Channel_2.Velocity" VarB="DCM Velocity Channel 2^Velocity"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_1.Control^Enable_latch_extern_on_negative_edge" VarB="ENC Control compact Channel 1^Control^Enable latch extern on negative edge"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_1.Control^Enable_latch_extern_on_positive_edge" VarB="ENC Control compact Channel 1^Control^Enable latch extern on positive edge"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_1.Control^Set_counter" VarB="ENC Control compact Channel 1^Control^Set counter"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_1.Set_counter_value" VarB="ENC Control compact Channel 1^Set counter value"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_2.Control^Enable_latch_extern_on_negative_edge" VarB="ENC Control compact Channel 2^Control^Enable latch extern on negative edge"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_2.Control^Enable_latch_extern_on_positive_edge" VarB="ENC Control compact Channel 2^Control^Enable latch extern on positive edge"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_2.Control^Set_counter" VarB="ENC Control compact Channel 2^Control^Set counter"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_7_EL7342.ENC_Control_compact_Channel_2.Set_counter_value" VarB="ENC Control compact Channel 2^Set counter value"/>
+			<OwnerB Name="TIID^EC^EC^EK^AB24">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.Channel_1.Input" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.Channel_2.Input" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.Channel_3.Input" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.Channel_4.Input" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.Channel_5.Input" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.Channel_6.Input" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.Channel_7.Input" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.Channel_8.Input" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.InfoData.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.WcState.InputToggle" VarB="WcState^InputToggle"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.AB24.WcState.WcState" VarB="WcState^WcState"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EC1^ (EK1200)^Term 8 (EL4004)">
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_8_EL4004.InfoData.AdsAddr" VarB="InfoData^AdsAddr"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_8_EL4004.InfoData.State" VarB="InfoData^State"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_8_EL4004.WcState.WcState" VarB="WcState^WcState"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_8_EL4004.AO_Outputs_Channel_1.Analog_output" VarB="AO Outputs Channel 1^Analog output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_8_EL4004.AO_Outputs_Channel_2.Analog_output" VarB="AO Outputs Channel 2^Analog output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_8_EL4004.AO_Outputs_Channel_3.Analog_output" VarB="AO Outputs Channel 3^Analog output"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_8_EL4004.AO_Outputs_Channel_4.Analog_output" VarB="AO Outputs Channel 4^Analog output"/>
+			<OwnerB Name="TIID^EC^EC^EK^PNEU">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.CommonValve" VarB="Device_State^CommonValve"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Configuration_Error_IO_Module" VarB="Device_State^Configuration Error IO-Module"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Configuration_Error_Valve" VarB="Device_State^Configuration Error Valve"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Configuratipn_Error_SLS" VarB="Device_State^Configuratipn Error SLS"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Count_IO_Module_to_big" VarB="Device_State^Count IO-Module to big"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Heardbeat_x" VarB="Device_State^Heardbeat"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.IO_1_8" VarB="Device_State^IO:1-8"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.IO_9_10" VarB="Device_State^IO:9-10"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Switchcounter_Error" VarB="Device_State^Switchcounter Error"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.UA_OFF" VarB="Device_State^UA OFF"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.UL_OFF" VarB="Device_State^UL OFF"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Undervoltage_5V" VarB="Device_State^Undervoltage 5V"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Undervoltage_UA" VarB="Device_State^Undervoltage UA"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Undervoltage_UL" VarB="Device_State^Undervoltage UL"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.Unknown_Module_ID" VarB="Device_State^Unknown Module ID"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_State.ValveExtSupplyDiag_1_6" VarB="Device_State^ValveExtSupplyDiag:1-6"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.InfoData.AdsAddr" VarB="InfoData^AdsAddr"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.InfoData.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[0]" VarB="Modules^Inputs^digital Data I_0"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[10]" VarB="Modules^Inputs^digital Data I_10"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[11]" VarB="Modules^Inputs^digital Data I_11"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[12]" VarB="Modules^Inputs^digital Data I_12"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[13]" VarB="Modules^Inputs^digital Data I_13"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[14]" VarB="Modules^Inputs^digital Data I_14"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[15]" VarB="Modules^Inputs^digital Data I_15"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[16]" VarB="Modules^Inputs^digital Data I_16"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[17]" VarB="Modules^Inputs^digital Data I_17"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[18]" VarB="Modules^Inputs^digital Data I_18"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[19]" VarB="Modules^Inputs^digital Data I_19"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[1]" VarB="Modules^Inputs^digital Data I_1"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[20]" VarB="Modules^Inputs^digital Data I_20"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[21]" VarB="Modules^Inputs^digital Data I_21"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[22]" VarB="Modules^Inputs^digital Data I_22"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[23]" VarB="Modules^Inputs^digital Data I_23"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[24]" VarB="Modules^Inputs^digital Data I_24"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[25]" VarB="Modules^Inputs^digital Data I_25"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[26]" VarB="Modules^Inputs^digital Data I_26"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[27]" VarB="Modules^Inputs^digital Data I_27"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[28]" VarB="Modules^Inputs^digital Data I_28"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[29]" VarB="Modules^Inputs^digital Data I_29"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[2]" VarB="Modules^Inputs^digital Data I_2"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[30]" VarB="Modules^Inputs^digital Data I_30"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[31]" VarB="Modules^Inputs^digital Data I_31"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[3]" VarB="Modules^Inputs^digital Data I_3"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[4]" VarB="Modules^Inputs^digital Data I_4"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[5]" VarB="Modules^Inputs^digital Data I_5"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[6]" VarB="Modules^Inputs^digital Data I_6"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[7]" VarB="Modules^Inputs^digital Data I_7"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[8]" VarB="Modules^Inputs^digital Data I_8"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Inputs.digital_Data_I[9]" VarB="Modules^Inputs^digital Data I_9"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.WcState.InputToggle" VarB="WcState^InputToggle"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.EK.PNEU.WcState.WcState" VarB="WcState^WcState"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_Control.Default_Modul_Control" VarB="Device_Control^Default_Modul_Control"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_Control.Freeze_Output" VarB="Device_Control^Freeze Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_Control.HL_Swap" VarB="Device_Control^HL_Swap"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Device_Control.Web_App_Disable" VarB="Device_Control^Web App Disable"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[0]" VarB="Modules^Outputs^digital Data O_0"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[10]" VarB="Modules^Outputs^digital Data O_10"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[11]" VarB="Modules^Outputs^digital Data O_11"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[12]" VarB="Modules^Outputs^digital Data O_12"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[13]" VarB="Modules^Outputs^digital Data O_13"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[14]" VarB="Modules^Outputs^digital Data O_14"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[15]" VarB="Modules^Outputs^digital Data O_15"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[16]" VarB="Modules^Outputs^digital Data O_16"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[17]" VarB="Modules^Outputs^digital Data O_17"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[18]" VarB="Modules^Outputs^digital Data O_18"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[19]" VarB="Modules^Outputs^digital Data O_19"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[1]" VarB="Modules^Outputs^digital Data O_1"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[20]" VarB="Modules^Outputs^digital Data O_20"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[21]" VarB="Modules^Outputs^digital Data O_21"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[22]" VarB="Modules^Outputs^digital Data O_22"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[23]" VarB="Modules^Outputs^digital Data O_23"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[24]" VarB="Modules^Outputs^digital Data O_24"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[25]" VarB="Modules^Outputs^digital Data O_25"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[26]" VarB="Modules^Outputs^digital Data O_26"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[27]" VarB="Modules^Outputs^digital Data O_27"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[28]" VarB="Modules^Outputs^digital Data O_28"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[29]" VarB="Modules^Outputs^digital Data O_29"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[2]" VarB="Modules^Outputs^digital Data O_2"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[30]" VarB="Modules^Outputs^digital Data O_30"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[31]" VarB="Modules^Outputs^digital Data O_31"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[3]" VarB="Modules^Outputs^digital Data O_3"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[4]" VarB="Modules^Outputs^digital Data O_4"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[5]" VarB="Modules^Outputs^digital Data O_5"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[6]" VarB="Modules^Outputs^digital Data O_6"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[7]" VarB="Modules^Outputs^digital Data O_7"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[8]" VarB="Modules^Outputs^digital Data O_8"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.EK.PNEU.Modules.Outputs.digital_Data_O[9]" VarB="Modules^Outputs^digital Data O_9"/>
 			</OwnerB>
-			<OwnerB Name="TIID^EC1^ (EK1200)^Term 9 (EL6001)">
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[0]" VarB="COM Inputs^Data In 0"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[10]" VarB="COM Inputs^Data In 10"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[11]" VarB="COM Inputs^Data In 11"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[12]" VarB="COM Inputs^Data In 12"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[13]" VarB="COM Inputs^Data In 13"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[14]" VarB="COM Inputs^Data In 14"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[15]" VarB="COM Inputs^Data In 15"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[16]" VarB="COM Inputs^Data In 16"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[17]" VarB="COM Inputs^Data In 17"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[18]" VarB="COM Inputs^Data In 18"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[19]" VarB="COM Inputs^Data In 19"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[1]" VarB="COM Inputs^Data In 1"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[20]" VarB="COM Inputs^Data In 20"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[21]" VarB="COM Inputs^Data In 21"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[2]" VarB="COM Inputs^Data In 2"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[3]" VarB="COM Inputs^Data In 3"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[4]" VarB="COM Inputs^Data In 4"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[5]" VarB="COM Inputs^Data In 5"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[6]" VarB="COM Inputs^Data In 6"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[7]" VarB="COM Inputs^Data In 7"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[8]" VarB="COM Inputs^Data In 8"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Data_In[9]" VarB="COM Inputs^Data In 9"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Status^Buffer_full" VarB="COM Inputs^Status^Buffer full"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Status^Framing_error" VarB="COM Inputs^Status^Framing error"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Status^Init_accepted" VarB="COM Inputs^Status^Init accepted"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Status^Input_length" VarB="COM Inputs^Status^Input length"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Status^Overrun_error" VarB="COM Inputs^Status^Overrun error"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Status^Parity_error" VarB="COM Inputs^Status^Parity error"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Status^Receive_request" VarB="COM Inputs^Status^Receive request"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Inputs.Status^Transmit_accepted" VarB="COM Inputs^Status^Transmit accepted"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.InfoData.AdsAddr" VarB="InfoData^AdsAddr"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.InfoData.State" VarB="InfoData^State"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.WcState.InputToggle" VarB="WcState^InputToggle"/>
-				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.WcState.WcState" VarB="WcState^WcState"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Ctrl^Init_request" VarB="COM Outputs^Ctrl^Init request"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Ctrl^Output_length" VarB="COM Outputs^Ctrl^Output length"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Ctrl^Receive_accepted" VarB="COM Outputs^Ctrl^Receive accepted"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Ctrl^Send_continues" VarB="COM Outputs^Ctrl^Send continues"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Ctrl^Transmit_request" VarB="COM Outputs^Ctrl^Transmit request"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[0]" VarB="COM Outputs^Data Out 0"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[10]" VarB="COM Outputs^Data Out 10"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[11]" VarB="COM Outputs^Data Out 11"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[12]" VarB="COM Outputs^Data Out 12"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[13]" VarB="COM Outputs^Data Out 13"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[14]" VarB="COM Outputs^Data Out 14"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[15]" VarB="COM Outputs^Data Out 15"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[16]" VarB="COM Outputs^Data Out 16"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[17]" VarB="COM Outputs^Data Out 17"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[18]" VarB="COM Outputs^Data Out 18"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[19]" VarB="COM Outputs^Data Out 19"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[1]" VarB="COM Outputs^Data Out 1"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[20]" VarB="COM Outputs^Data Out 20"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[21]" VarB="COM Outputs^Data Out 21"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[2]" VarB="COM Outputs^Data Out 2"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[3]" VarB="COM Outputs^Data Out 3"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[4]" VarB="COM Outputs^Data Out 4"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[5]" VarB="COM Outputs^Data Out 5"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[6]" VarB="COM Outputs^Data Out 6"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[7]" VarB="COM Outputs^Data Out 7"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[8]" VarB="COM Outputs^Data Out 8"/>
-				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC1.EK1200.Term_9_EL6001.COM_Outputs.Data_Out[9]" VarB="COM Outputs^Data Out 9"/>
+			<OwnerB Name="TIID^EC^EC^IA1">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_1.Input" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_10.Input" VarB="Channel 10^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_11.Input" VarB="Channel 11^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_12.Input" VarB="Channel 12^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_13.Input" VarB="Channel 13^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_14.Input" VarB="Channel 14^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_15.Input" VarB="Channel 15^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_16.Input" VarB="Channel 16^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_2.Input" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_3.Input" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_4.Input" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_5.Input" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_6.Input" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_7.Input" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_8.Input" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.Channel_9.Input" VarB="Channel 9^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.InfoData.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.WcState.InputToggle" VarB="WcState^InputToggle"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.IA1.WcState.WcState" VarB="WcState^WcState"/>
+			</OwnerB>
+			<OwnerB Name="TIID^EC^EC^QA1">
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.QA1.InfoData.State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Inputs^GVL_iXlinker.EC.EC.QA1.WcState.WcState" VarB="WcState^WcState"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_1.Output" VarB="Channel 1^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_10.Output" VarB="Channel 10^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_11.Output" VarB="Channel 11^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_12.Output" VarB="Channel 12^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_13.Output" VarB="Channel 13^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_14.Output" VarB="Channel 14^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_15.Output" VarB="Channel 15^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_16.Output" VarB="Channel 16^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_2.Output" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_3.Output" VarB="Channel 3^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_4.Output" VarB="Channel 4^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_5.Output" VarB="Channel 5^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_6.Output" VarB="Channel 6^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_7.Output" VarB="Channel 7^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_8.Output" VarB="Channel 8^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_iXlinker.EC.EC.QA1.Channel_9.Output" VarB="Channel 9^Output"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
