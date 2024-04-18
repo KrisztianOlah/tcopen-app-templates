@@ -7,6 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid x:Name="Element" Grid.IsSharedSizeScope="True">
-        <vortex:RenderableContentControl DataContext="{Binding Components}" PresentationType="Base-Service-Manual-Base"></vortex:RenderableContentControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <local:CUBaseInfoTasksView DataContext="{Binding }" ></local:CUBaseInfoTasksView>
+        <vortex:RenderableContentControl Grid.Row="1" DataContext="{Binding Components}" PresentationType="Base-Service-Manual-Base"></vortex:RenderableContentControl>
     </Grid>
 </UserControl>

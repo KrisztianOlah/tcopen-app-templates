@@ -1,5 +1,5 @@
 <UserControl
-    x:Class="x_template_xPlc.CUBaseTasksView"
+    x:Class="x_template_xPlc.CUBaseInfoTasksView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -197,14 +197,6 @@
                 </ScrollViewer>
             </materialDesign:Card>
         </Grid>
-        <!-- Diagnostics card -->
-        <materialDesign:Card
-            VerticalAlignment="Bottom"
-            Grid.Row="1"
-            materialDesign:ShadowAssist.ShadowDepth="Depth1">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <vortex:RenderableContentControl DataContext="{Binding Component}" PresentationType="MiniDiagnostics" />
-            </ScrollViewer>
-        </materialDesign:Card>
+     
     </Grid>
 </UserControl>

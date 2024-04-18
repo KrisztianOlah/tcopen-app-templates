@@ -35,12 +35,30 @@ namespace x_template_xPlc
         {
             get
             {
-                if (Component != null && Component.GetChildren() != null)
+                var suffixesToMatch = new List<string> { "_automatTask", "_groundTask", "_manualTask" };
+                if (Component != null && Component.GetKids() != null)
                 {
-                    _taskControls = Component.GetChildren<ITcoTasked>();                    
+                    _taskControls = Component.GetKids().Where(p => suffixesToMatch.Any(suffix => p.Symbol.EndsWith(suffix)));
+                    //_taskControls = Component.GetChildren<ITcoTasked>();                    
                 }
 
                 return _taskControls;
+            }
+        }
+
+        public IEnumerable<object> _safetyTaskControls = new List<object>();
+        public IEnumerable<object> SafetyTaskControls
+        {
+            get
+            {
+                var suffixesToMatch = new List<string> { "_suspendTask", "_recoverTask" };
+                if (Component != null && Component.GetKids() != null)
+                {
+                    _safetyTaskControls = Component.GetKids().Where(p => suffixesToMatch.Any(suffix => p.Symbol.EndsWith(suffix)));
+                    //_taskControls = Component.GetChildren<ITcoTasked>();                    
+                }
+
+                return _safetyTaskControls;
             }
         }
 

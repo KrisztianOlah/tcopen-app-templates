@@ -7,7 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid x:Name="Element" Grid.IsSharedSizeScope="True">
-        <TabControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <local:CUBaseInfoTasksView DataContext="{Binding }" ></local:CUBaseInfoTasksView>
+
+        <TabControl Grid.Row="1">
             <TabItem Header="{Binding AttributeName}" DataContext="{Binding Component}">
                 <vortex:RenderableContentControl DataContext="{Binding _cuProcessDataDisplay}" PresentationType="ShadowDisplaySlim-ShadowDisplay"></vortex:RenderableContentControl>
             </TabItem>

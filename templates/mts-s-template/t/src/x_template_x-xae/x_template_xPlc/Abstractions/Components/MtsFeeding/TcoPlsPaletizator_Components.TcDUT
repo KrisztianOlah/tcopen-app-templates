@@ -17,8 +17,7 @@ STRUCT
 	
 	{attribute addProperty Name "(I4) <#Pritomnost blistra v pracovnej pozicii#>"}
 	I4_PresentBlisterInWorkingPos : TcoElements.TcoDi(THISSTRUCT);
-	
-	
+		
 	{attribute addProperty Name "(I5) <#Vystupny blister neje v sklzovom dopravniku#>"}
 	I5_OutBlistersIsThrowedCorrectly : TcoElements.TcoDi(THISSTRUCT);
 	
