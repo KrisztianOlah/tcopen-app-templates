@@ -20,7 +20,7 @@
             </TabItem>
             <TabItem Header="PLANER">
                 <UniformGrid  Rows="2">
-                    <vortex:RenderableContentControl DataContext="{Binding . ,Mode=OneWay}" PresentationType="Tasks"></vortex:RenderableContentControl>
+                    <vortex:RenderableContentControl DataContext="{Binding . ,Mode=OneWay}" PresentationType="InfoTasks"></vortex:RenderableContentControl>
                     <view:ProductionPlanView Grid.Row="2" DataContext="{Binding ProductionPlanViewModel}"></view:ProductionPlanView>
                 </UniformGrid>
 
@@ -34,7 +34,7 @@
                     </Grid.RowDefinitions>
                     <ScrollViewer>
 
-                        <vortex:RenderableContentControl DataContext="{Binding . ,Mode=OneWay}" PresentationType="Tasks"></vortex:RenderableContentControl>
+                        <vortex:RenderableContentControl DataContext="{Binding . ,Mode=OneWay}" PresentationType="InfoTasks"></vortex:RenderableContentControl>
                     </ScrollViewer>
                     <vortexs:PermissionBox  Grid.Row="2"  Permissions="Administrator|instructor_access" SecurityMode="Disabled">
                         <x_template_xinstructor:InstructorView DataContext="{Binding InstructorViewModel}"></x_template_xinstructor:InstructorView>
