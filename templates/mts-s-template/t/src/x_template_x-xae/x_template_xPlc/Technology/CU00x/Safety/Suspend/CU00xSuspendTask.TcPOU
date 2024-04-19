@@ -61,7 +61,7 @@ IF (Step(30000, TRUE, 'SUSPEND DONE')) THEN
 		
         THIS^._done:=TRUE;
 		THIS^.Task.DoneWhen(TRUE);
-		
+	
    
     //-------------------------------------	
 END_IF

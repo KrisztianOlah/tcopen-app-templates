@@ -12,7 +12,7 @@
             <RowDefinition ></RowDefinition>
 
         </Grid.RowDefinitions>
-        <local:CUBaseInfoTasksView DataContext="{Binding }" ></local:CUBaseInfoTasksView>
+        <vortex:RenderableContentControl DataContext="{Binding Component }" PresentationType="InfoTasks"></vortex:RenderableContentControl>
 
         <TabControl Grid.Row="1">
             <TabItem Header="{Binding AttributeName}" DataContext="{Binding Component}">

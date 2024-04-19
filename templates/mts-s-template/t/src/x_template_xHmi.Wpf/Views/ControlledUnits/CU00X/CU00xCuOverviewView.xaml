@@ -4,13 +4,50 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"        
              xmlns:mainplc="clr-namespace:x_template_xPlc;assembly=x_template_xPlcConnector"
-             xmlns:local="clr-namespace:x_template_xPlc"
+             xmlns:local="clr-namespace:x_template_xPlc" xmlns:vortex="http://vortex.mts/xaml" xmlns:vortexs="http://vortex.security.mts/xaml" xmlns:x_template_xinstructor="clr-namespace:x_template_xInstructor;assembly=x_template_xInstructor" xmlns:view="clr-namespace:x_template_xProductionPlaner.Planer.View;assembly=x_template_xProductionPlaner"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <d:UserControl.DataContext>
         <mainplc:CU00x></mainplc:CU00x>
     </d:UserControl.DataContext>
     <Grid>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignBody1TextBlock}">Is't lonely here</TextBlock>
+        <TabControl Grid.Row="1" >
+          
+            <TabItem Header="STATION">
+                <!--<mainplc:CUBaseSpotView MinHeight="200"  DataContext="{Binding x_template_xPlc.MAIN._technology._cu00x, Mode=OneWay}"/>-->
+                <vortex:RenderableContentControl DataContext="{Binding  .,Mode=OneWay}" PresentationType="Spot"></vortex:RenderableContentControl>
+
+            </TabItem>
+            <TabItem Header="PLANER">
+                <UniformGrid  Rows="2">
+                    <vortex:RenderableContentControl DataContext="{Binding . ,Mode=OneWay}" PresentationType="Tasks"></vortex:RenderableContentControl>
+                    <view:ProductionPlanView Grid.Row="2" DataContext="{Binding ProductionPlanViewModel}"></view:ProductionPlanView>
+                </UniformGrid>
+
+            </TabItem>
+            <TabItem Header="INSTRUCTOR">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <ScrollViewer>
+
+                        <vortex:RenderableContentControl DataContext="{Binding . ,Mode=OneWay}" PresentationType="Tasks"></vortex:RenderableContentControl>
+                    </ScrollViewer>
+                    <vortexs:PermissionBox  Grid.Row="2"  Permissions="Administrator|instructor_access" SecurityMode="Disabled">
+                        <x_template_xinstructor:InstructorView DataContext="{Binding InstructorViewModel}"></x_template_xinstructor:InstructorView>
+                    </vortexs:PermissionBox>
+                </Grid>
+
+            </TabItem>
+          
+           
+
+           
+
+        </TabControl>
+
     </Grid>
 </UserControl>
