@@ -40,6 +40,12 @@ namespace x_template_xOp
     /// </summary>
     public partial class App : Application
     {
+
+        /// <summary>
+        /// Set this to false to consume the database without writing
+        /// </summary>
+        private bool IsDataServer { get; set; } = true;
+
         protected override void OnStartup(StartupEventArgs e)
         {
 
@@ -296,7 +302,6 @@ namespace x_template_xOp
         }
         private IAuthenticationService CreateSecurityManageUsingRavenDb()
         {
-
             var users = new RavenDbRepository<UserData>(new RavenDbRepositorySettings<UserData>(new string[] { Entry.Settings.GetConnectionString() }, "Users", "", ""));
             var groups = new RavenDbRepository<GroupData>(new RavenDbRepositorySettings<GroupData>(new string[] { Entry.Settings.GetConnectionString() }, "Groups", "", ""));
             var roleGroupManager = new RoleGroupManager(groups);
@@ -307,13 +312,13 @@ namespace x_template_xOp
         private void SetUpRepositoriesUsingRavenDb()
         {
             var ProcessDataRepoSettings = new RavenDbRepositorySettings<PlainProcessData>(new string[] { Entry.Settings.GetConnectionString() }, "ProcessSettings", "", "");
-            InitializeProcessDataRepositoryWithDataExchange(x_template_xPlc.MAIN._technology._processSettings, new RavenDbRepository<PlainProcessData>(ProcessDataRepoSettings));
+            IntializeDataRepository(x_template_xPlc.MAIN._technology._processSettings, new RavenDbRepository<PlainProcessData>(ProcessDataRepoSettings),IsDataServer);
 
             var TechnologicalDataRepoSettings = new RavenDbRepositorySettings<PlainTechnologyData>(new string[] { Entry.Settings.GetConnectionString() }, "TechnologySettings", "", "");
-            IntializeTechnologyDataRepositoryWithDataExchange(x_template_xPlc.MAIN._technology._technologySettings, new RavenDbRepository<PlainTechnologyData>(TechnologicalDataRepoSettings));
+            IntializeDataRepository(x_template_xPlc.MAIN._technology._technologySettings, new RavenDbRepository<PlainTechnologyData>(TechnologicalDataRepoSettings),IsDataServer);
 
             var ReworklDataRepoSettings = new RavenDbRepositorySettings<PlainProcessData>(new string[] { Entry.Settings.GetConnectionString() }, "ReworkSettings", "", "");
-            InitializeProcessDataRepositoryWithDataExchange(x_template_xPlc.MAIN._technology._reworkSettings, new RavenDbRepository<PlainProcessData>(ReworklDataRepoSettings));
+            IntializeDataRepository(x_template_xPlc.MAIN._technology._reworkSettings, new RavenDbRepository<PlainProcessData>(ReworklDataRepoSettings),IsDataServer);
 
             //Statistics
             var _statisticsDataHandler = RepositoryDataSetHandler<StatisticsDataItem>.CreateSet(new RavenDbRepository<EntitySet<StatisticsDataItem>>(new RavenDbRepositorySettings<EntitySet<StatisticsDataItem>>(new string[] { Entry.Settings.GetConnectionString() }, "Statistics", "", "")));
@@ -325,8 +330,8 @@ namespace x_template_xOp
 
 
             var Traceability = new RavenDbRepositorySettings<PlainProcessData>(new string[] { Entry.Settings.GetConnectionString() }, "Traceability", "", "");
-            InitializeProcessDataRepositoryWithDataExchange(x_template_xPlc.MAIN._technology._processTraceability, new RavenDbRepository<PlainProcessData>(Traceability));
-            InitializeProcessDataRepositoryWithDataExchangeWithStatistic(x_template_xPlc.MAIN._technology._cu00x._processData, new RavenDbRepository<PlainProcessData>(Traceability), CuxStatistic);
+            IntializeDataRepository(x_template_xPlc.MAIN._technology._processTraceability, new RavenDbRepository<PlainProcessData>(Traceability),IsDataServer);
+            InitializeProcessDataRepositoryWithStatistics(x_template_xPlc.MAIN._technology._cu00x._processData, new RavenDbRepository<PlainProcessData>(Traceability), CuxStatistic, IsDataServer);
 
             Rework = new ReworkModel(new RavenDbRepository<PlainProcessData>(ReworklDataRepoSettings), new RavenDbRepository<PlainProcessData>(Traceability));
 
@@ -357,18 +362,17 @@ namespace x_template_xOp
 
         }
 
-
         private void SetUpRepositoriesUsingMongoDb()
         {
             var ProcessDataRepoSettings = new MongoDbRepositorySettings<PlainProcessData>(Entry.Settings.GetConnectionString(), Entry.Settings.DbName, "ProcessSettings");
-            InitializeProcessDataRepositoryWithDataExchange(x_template_xPlc.MAIN._technology._processSettings, new MongoDbRepository<PlainProcessData>(ProcessDataRepoSettings));
+            IntializeDataRepository(x_template_xPlc.MAIN._technology._processSettings, new MongoDbRepository<PlainProcessData>(ProcessDataRepoSettings), IsDataServer);
             InitializeIndexProcessDataRepositoryMongoDb(ProcessDataRepoSettings);
 
             var TechnologicalDataRepoSettings = new MongoDbRepositorySettings<PlainTechnologyData>(Entry.Settings.GetConnectionString(), Entry.Settings.DbName, "TechnologySettings");
-            IntializeTechnologyDataRepositoryWithDataExchange(x_template_xPlc.MAIN._technology._technologySettings, new MongoDbRepository<PlainTechnologyData>(TechnologicalDataRepoSettings));
+            IntializeDataRepository(x_template_xPlc.MAIN._technology._technologySettings, new MongoDbRepository<PlainTechnologyData>(TechnologicalDataRepoSettings), IsDataServer);
 
             var ReworklDataRepoSettings = new MongoDbRepositorySettings<PlainProcessData>(Entry.Settings.GetConnectionString(), Entry.Settings.DbName, "ReworkSettings");
-            InitializeProcessDataRepositoryWithDataExchange(x_template_xPlc.MAIN._technology._reworkSettings, new MongoDbRepository<PlainProcessData>(ReworklDataRepoSettings));
+            IntializeDataRepository(x_template_xPlc.MAIN._technology._reworkSettings, new MongoDbRepository<PlainProcessData>(ReworklDataRepoSettings),IsDataServer);
 
             //Statistics
             var _statisticsDataHandler = RepositoryDataSetHandler<StatisticsDataItem>.CreateSet(new MongoDbRepository<EntitySet<StatisticsDataItem>>(new MongoDbRepositorySettings<EntitySet<StatisticsDataItem>>(Entry.Settings.GetConnectionString(), Entry.Settings.DbName, "Statistics")));
@@ -380,8 +384,8 @@ namespace x_template_xOp
 
 
             var Traceability = new MongoDbRepositorySettings<PlainProcessData>(Entry.Settings.GetConnectionString(), Entry.Settings.DbName, "Traceability");
-            InitializeProcessDataRepositoryWithDataExchange(x_template_xPlc.MAIN._technology._processTraceability, new MongoDbRepository<PlainProcessData>(Traceability));
-            InitializeProcessDataRepositoryWithDataExchangeWithStatistic(x_template_xPlc.MAIN._technology._cu00x._processData, new MongoDbRepository<PlainProcessData>(Traceability), CuxStatistic);
+            IntializeDataRepository(x_template_xPlc.MAIN._technology._processTraceability, new MongoDbRepository<PlainProcessData>(Traceability), IsDataServer);
+            InitializeProcessDataRepositoryWithStatistics(x_template_xPlc.MAIN._technology._cu00x._processData, new MongoDbRepository<PlainProcessData>(Traceability), CuxStatistic, IsDataServer);
             InitializeIndexProcessDataRepositoryMongoDb(Traceability);
 
             Rework = new ReworkModel(new MongoDbRepository<PlainProcessData>(ReworklDataRepoSettings), new MongoDbRepository<PlainProcessData>(Traceability));
@@ -429,7 +433,6 @@ namespace x_template_xOp
                 indexOptions.Name = name;
                 var indexKey = Builders<PlainProcessData>.IndexKeys.Descending(p => p._EntityId);
                 mongoDbRepositorySettings.Collection.Indexes.CreateOne(new CreateIndexModel<PlainProcessData>(indexKey, indexOptions));
-
             }
 
             name = "_Created";
@@ -439,8 +442,8 @@ namespace x_template_xOp
                 indexOptions.Name = name;
                 var indexKey = Builders<PlainProcessData>.IndexKeys.Descending(p => p._Created);
                 mongoDbRepositorySettings.Collection.Indexes.CreateOne(new CreateIndexModel<PlainProcessData>(indexKey, indexOptions));
-
             }
+
             name = "_Modified";
             if (!indexes.Exists(i => i.GetElement("name").ToString().Contains(name)))
             {
@@ -448,49 +451,43 @@ namespace x_template_xOp
                 indexOptions.Name = name;
                 var indexKey = Builders<PlainProcessData>.IndexKeys.Descending(p => p._Modified);
                 mongoDbRepositorySettings.Collection.Indexes.CreateOne(new CreateIndexModel<PlainProcessData>(indexKey, indexOptions));
-
             }
-
         }
 
-        /// <summary>
-        /// Initializes <see cref="ProcessDataManager"/>s repository for data exchange between PLC and storage (database).
-        /// </summary>
-        /// <param name="manager">Data manager</param>
-        /// <param name="repository">Repository</param>
-        private static void InitializeProcessDataRepositoryWithDataExchange(ProcessDataManager processData, IRepository<PlainProcessData> repository)
-        {
-            repository.OnCreate = (id, data) => { data._Created = DateTime.Now; data._Modified = DateTime.Now; };
-            repository.OnUpdate = (id, data) => { data._Modified = DateTime.Now; };
-            processData.InitializeRepository(repository);
-            processData.InitializeRemoteDataExchange(repository);
-
-        }
 
         /// Initializes <see cref="ProcessDataManager"/>s repository for data exchange between PLC and storage (database).
         /// </summary>
         /// <param name="manager">Data manager</param>
         /// <param name="repository">Repository</param>
-        private static void InitializeProcessDataRepositoryWithDataExchangeWithStatistic(ProcessDataManager processData, IRepository<PlainProcessData> repository, StatisticsDataController cuxStatistic)
+        private static void InitializeProcessDataRepositoryWithStatistics(ProcessDataManager processData, IRepository<PlainProcessData> repository, StatisticsDataController cuSytatistics, bool withDataExchange)
         {
             repository.OnCreate = (id, data) => { data._Created = DateTime.Now; data._Modified = DateTime.Now; };
-            repository.OnUpdate = (id, data) => { data._Modified = DateTime.Now; cuxStatistic.Count(data); };
+            repository.OnUpdate = (id, data) => { data._Modified = DateTime.Now; cuSytatistics.Count(data); };
             processData.InitializeRepository(repository);
-            processData.InitializeRemoteDataExchange(repository);
+            if (withDataExchange)
+            {
+                processData.InitializeRemoteDataExchange(repository);
+            }
         }
 
+
         /// <summary>
-        /// Initializes <see cref="TechnologicalDataManager"/>s repository for data exchange between PLC and storage (database).
+        /// Initializes <see cref="TechnologicalDataManager"/>s or <see cref="ProcessDataManager"/>s repository for data exchange between PLC and storage (database).
         /// </summary>
         /// <param name="manager">Data manager</param>
         /// <param name="repository">Repository</param>
-        private static void IntializeTechnologyDataRepositoryWithDataExchange(TechnologicalDataManager manager, IRepository<PlainTechnologyData> repository)
+        private static void IntializeDataRepository<T1, T2>(T1 manager, IRepository<T2> repository, bool withDataExchange) where T1 : TcoData.TcoDataExchange
+                                                                                                                          where T2 : PlainTcoEntityBase
         {
             repository.OnCreate = (id, data) => { data._Created = DateTime.Now; data._Modified = DateTime.Now; };
             repository.OnUpdate = (id, data) => { data._Modified = DateTime.Now; };
             manager.InitializeRepository(repository);
-            manager.InitializeRemoteDataExchange(repository);
+            if (withDataExchange)
+            {
+                manager.InitializeRemoteDataExchange(repository);
+            }
         }
+
 
         /// <summary>
         /// Gets the twin connector for this application.
