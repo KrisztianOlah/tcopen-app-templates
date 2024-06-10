@@ -165,9 +165,6 @@
   <data name="___Operation_ended__" xml:space="preserve">
     <value>Operace skončila</value>
   </data>
-  <data name="___Operator__" xml:space="preserve">
-    <value>Operátor</value>
-  </data>
   <data name="___Entity_header__" xml:space="preserve">
     <value>Hlavička kusu</value>
   </data>
@@ -198,9 +195,6 @@
   <data name="___Last_Rework_Name__" xml:space="preserve">
     <value>Jméno posledního reworku</value>
   </data>
-  <data name="___ID__" xml:space="preserve">
-    <value>ID</value>
-  </data>
   <data name="___Created__" xml:space="preserve">
     <value>Vytvořeno</value>
   </data>
@@ -217,15 +211,21 @@
     <value>Recept</value>
   </data>
   <data name="___Recipe_created__" xml:space="preserve">
-    <value>Vytvořený recept</value>
+    <value>Recept vytvořený</value>
   </data>
   <data name="___Recipe_modified__" xml:space="preserve">
-    <value>Upravený recept</value>
+    <value>Recept upravený</value>
   </data>
   <data name="___Reworked__" xml:space="preserve">
-    <value>Reworkované</value>
+    <value>Rework</value>
   </data>
   <data name="___Rework_Count__" xml:space="preserve">
     <value>Počet reworkovani</value>
+  </data>
+  <data name="___Warning__" xml:space="preserve">
+    <value>Upozornení</value>
+  </data>
+  <data name="___Operator__" xml:space="preserve">
+    <value>Obsluha</value>
   </data>
 </root>
