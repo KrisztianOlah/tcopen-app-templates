@@ -59,9 +59,9 @@ namespace x_template_xOp
 
          
 
-            Entry.LoadAppSettings("defaultOP", IsDebug);
+            Entry.LoadAppSettings("defaultOP", RepositoryEntry.IsDebug());
 
-            if (!IsDebug)
+            if (!RepositoryEntry.IsDebug())
                 DataExchangeActive = Entry.Settings.DataExchange;
             else
                 DataExchangeActive = false; //should be false ,do not exchange data due 'x_template_xHmi.Wpf' do it in debug otherwise it is defined  'LoadAppSettings' method above
@@ -431,24 +431,24 @@ namespace x_template_xOp
 
         }
 
-        /// <summary>
-        /// Gets a value indicating whether the assembly was built in debug mode.
-        /// </summary>
-        public static bool IsDebug
-        {
-            get
-            {
-                bool isDebug = false;
+//        /// <summary>
+//        /// Gets a value indicating whether the assembly was built in debug mode.
+//        /// </summary>
+//        public static bool IsDebug
+//        {
+//            get
+//            {
+//                bool isDebug = false;
 
-#if (DEBUG)
-                isDebug = true;
-#else
-                    isDebug = false;
-#endif
+//#if (DEBUG)
+//                isDebug = true;
+//#else
+//                    isDebug = false;
+//#endif
 
-                return isDebug;
-            }
-        }
+//                return isDebug;
+//            }
+//        }
 
 
 

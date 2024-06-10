@@ -42,8 +42,8 @@ namespace x_template_xPlcConnector
         public long CappedMaxDocuments { get; set; } = 1000000;
 
         // USER
-        public string AutologinUserName { get; set; } = "admin";
-        public  string AutologinUserPassword { get; set; }= "admin";
+        public string AutologinUserName { get; set; } = RepositoryEntry.IsDebug() ? "MTSAdmin" :  "operator";
+        public  string AutologinUserPassword { get; set; }= RepositoryEntry.IsDebug() ? "MTSservis" : "";
 
         public  string GetConnectionString()
         {

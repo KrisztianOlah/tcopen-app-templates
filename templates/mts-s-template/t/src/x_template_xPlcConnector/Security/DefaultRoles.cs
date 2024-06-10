@@ -7,37 +7,37 @@ namespace x_template_xPlcConnector
     public class DefaultRoles
     {
         private DefaultRoles()
-        { 
-          
+        {
 
-            SecurityManager.RoleGroupManager.AddRolesToGroup(DefaultGroups.Administrator, 
-                new string[] { "Administrator",
-                    process_settings_access, process_settings_change,rework_settings_access,process_traceability_access,technology_settings_access,
-                    instructor_access,planer_access,statistic_access,
-                    technology_automat_all,technology_ground_all,
-                    ground_position_start,automat_start,manual_start,
-                    station_details,sequencer_step,
-                    can_override_inspection,can_change_hw_settings,
-                    can_user_close_application,can_user_change_localization});
+            SecurityManager.Manager.GetOrCreateRole(new Role(process_settings_access));
+            SecurityManager.Manager.GetOrCreateRole(new Role(process_settings_change));
+            SecurityManager.Manager.GetOrCreateRole(new Role(rework_settings_access));
+            SecurityManager.Manager.GetOrCreateRole(new Role(process_traceability_access));
+            SecurityManager.Manager.GetOrCreateRole(new Role(technology_settings_access));
 
-            SecurityManager.RoleGroupManager.AddRolesToGroup(DefaultGroups.Maintenance,
-               new string[] {
-                    //process_settings_access, process_settings_change,rework_settings_access,process_traceability_access,technology_settings_access,
-                    //instructor_access,planer_access,statistic_access,
-                    technology_automat_all,technology_ground_all,
-                    ground_position_start,automat_start,manual_start,
-                    station_details,sequencer_step,
-                    can_override_inspection,can_change_hw_settings,
-                    can_user_close_application,can_user_change_localization});
-            SecurityManager.RoleGroupManager.AddRolesToGroup(DefaultGroups.Operator,
-              new string[] {
-                    //process_settings_access, process_settings_change,rework_settings_access,process_traceability_access,technology_settings_access,
-                    //instructor_access,planer_access,statistic_access,
-                    //technology_automat_all,technology_ground_all,
-                    //ground_position_start,automat_start,manual_start,
-                    //station_details,sequencer_step,
-                    //can_override_inspection,can_change_hw_settings,
-                    can_user_close_application,can_user_change_localization});
+            SecurityManager.Manager.GetOrCreateRole(new Role(instructor_access));
+            SecurityManager.Manager.GetOrCreateRole(new Role(planer_access));
+            SecurityManager.Manager.GetOrCreateRole(new Role(statistic_access));
+
+            SecurityManager.Manager.GetOrCreateRole(new Role(technology_automat_all));
+            SecurityManager.Manager.GetOrCreateRole(new Role(technology_ground_all));
+
+            SecurityManager.Manager.GetOrCreateRole(new Role(ground_position_start));
+            SecurityManager.Manager.GetOrCreateRole(new Role(automat_start));
+            SecurityManager.Manager.GetOrCreateRole(new Role(manual_start));
+
+            SecurityManager.Manager.GetOrCreateRole(new Role(station_details));
+            SecurityManager.Manager.GetOrCreateRole(new Role(sequencer_step));
+
+            SecurityManager.Manager.GetOrCreateRole(new Role(can_override_inspection));
+            SecurityManager.Manager.GetOrCreateRole(new Role(can_change_hw_settings));
+
+            SecurityManager.Manager.GetOrCreateRole(new Role(can_user_close_application));
+            SecurityManager.Manager.GetOrCreateRole(new Role(can_user_change_localization));
+
+
+
+         
         }
         public const string process_settings_access = nameof(process_settings_access);
         public const string process_settings_change = nameof(process_settings_change);
@@ -73,6 +73,38 @@ namespace x_template_xPlcConnector
         public static void Create()
         {
             _roles = new DefaultRoles();
+        }
+
+        public static void AssignRoles()
+        {
+            SecurityManager.RoleGroupManager.AddRolesToGroup(DefaultGroups.Administrator,
+             new string[] { "Administrator",
+                    process_settings_access, process_settings_change,rework_settings_access,process_traceability_access,technology_settings_access,
+                    instructor_access,planer_access,statistic_access,
+                    technology_automat_all,technology_ground_all,
+                    ground_position_start,automat_start,manual_start,
+                    station_details,sequencer_step,
+                    can_override_inspection,can_change_hw_settings,
+                    can_user_close_application,can_user_change_localization});
+
+            SecurityManager.RoleGroupManager.AddRolesToGroup(DefaultGroups.Maintenance,
+               new string[] {
+                    //process_settings_access, process_settings_change,rework_settings_access,process_traceability_access,technology_settings_access,
+                    //instructor_access,planer_access,statistic_access,
+                    technology_automat_all,technology_ground_all,
+                    ground_position_start,automat_start,manual_start,
+                    station_details,sequencer_step,
+                    can_override_inspection,can_change_hw_settings,
+                    can_user_close_application,can_user_change_localization});
+            SecurityManager.RoleGroupManager.AddRolesToGroup(DefaultGroups.Operator,
+              new string[] {
+                    //process_settings_access, process_settings_change,rework_settings_access,process_traceability_access,technology_settings_access,
+                    //instructor_access,planer_access,statistic_access,
+                    //technology_automat_all,technology_ground_all,
+                    //ground_position_start,automat_start,manual_start,
+                    //station_details,sequencer_step,
+                    //can_override_inspection,can_change_hw_settings,
+                    can_user_close_application,can_user_change_localization});
         }
         
     }

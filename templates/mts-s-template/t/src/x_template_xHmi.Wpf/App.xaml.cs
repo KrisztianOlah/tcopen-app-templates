@@ -60,9 +60,9 @@ namespace x_template_xHmi.Wpf
            
 
             const string SetId = "default";
-            Entry.LoadAppSettings(SetId, IsDebug);
+            Entry.LoadAppSettings(SetId, RepositoryEntry.IsDebug());
 
-            if (!IsDebug)
+            if (!RepositoryEntry.IsDebug())
                 DataExchangeActive = Entry.Settings.DataExchange;
             else
                 DataExchangeActive = true; //should be true  ,do  exchange data are hanlded by this instance 
@@ -163,6 +163,9 @@ namespace x_template_xHmi.Wpf
 
 
             // Authenticates default user, change this line if you need to authenticate different user.
+         
+            Console.WriteLine(Entry.Settings.AutologinUserName.ToString());
+            Console.WriteLine(Entry.Settings.AutologinUserPassword);
            SecurityManager.Manager.Service.AuthenticateUser(Entry.Settings.AutologinUserName, Entry.Settings.AutologinUserPassword);
 
 
@@ -433,25 +436,7 @@ namespace x_template_xHmi.Wpf
 
         }
 
-        /// <summary>
-        /// Gets a value indicating whether the assembly was built in debug mode.
-        /// </summary>
-        public static bool IsDebug
-        {
-            get
-            {
-                bool isDebug = false;
-
-#if (DEBUG)
-                isDebug = true;
-#else
-                    isDebug = false;
-#endif
-
-                return isDebug;
-            }
-        }
-
+     
 
         /// <summary>
         /// Gets the twin connector for this application.

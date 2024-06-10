@@ -11,9 +11,8 @@ namespace x_template_xPlcConnector
     {
         private DefaultUsers()
         {
-            CreateUser(SecurityManager.Manager.UserRepository,"admin","admin",DefaultGroups.Administrator);
-            CreateUser(SecurityManager.Manager.UserRepository, "maintenance", "maintenance", DefaultGroups.Maintenance);
-            CreateUser(SecurityManager.Manager.UserRepository, "operator", "", DefaultGroups.Operator);
+            CreateUser(SecurityManager.Manager.UserRepository,"MTSAdmin","MTSservis",DefaultGroups.Administrator,true);
+            CreateUser(SecurityManager.Manager.UserRepository, "operator", "", DefaultGroups.Operator,true);
 
         }
 
@@ -22,7 +21,7 @@ namespace x_template_xPlcConnector
         private static DefaultUsers _users;
 
 
-        private void CreateUser(IRepository<UserData> repository,string name, string password, string group)
+        private void CreateUser(IRepository<UserData> repository,string name, string password, string group,bool canChangePsw)
         {
             try
             {
@@ -31,6 +30,7 @@ namespace x_template_xPlcConnector
                 newUser.SetPlainTextPassword(password);
                 newUser._Created = DateTime.Now;
                 newUser._Modified = DateTime.Now;
+                newUser.CanUserChangePassword = canChangePsw;
                newUser.Roles = new ObservableCollection<string>(new string[] { group });
                 newUser.Level = group;
                 repository.Create(newUser.Username, newUser);

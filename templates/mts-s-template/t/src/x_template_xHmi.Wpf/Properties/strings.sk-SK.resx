@@ -400,7 +400,7 @@
     <value>Procesné data stanice</value>
   </data>
   <data name="StationTechnologyData" xml:space="preserve">
-    <value>Technologicke dáta stanicer</value>
+    <value>Technologicke dáta stanice</value>
   </data>
   <data name="ShowStationInWindow" xml:space="preserve">
     <value>Zobraziť stanicu v novom okne.</value>
