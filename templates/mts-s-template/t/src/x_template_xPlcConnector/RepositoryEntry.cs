@@ -39,7 +39,7 @@ namespace x_template_xPlcConnector
 
 
 
-        public static IAuthenticationService CreateSecurityManageUsingRavenDb(bool withDefaultGroups, bool withDefaultRoles)
+        public static IAuthenticationService CreateSecurityManageUsingRavenDb(bool withDefaultGroups, bool withDefaultUsers)
         {
 
             var users = new RavenDbRepository<UserData>(new RavenDbRepositorySettings<UserData>(new string[] { Entry.Settings.GetConnectionString() }, "Users", "", ""));
@@ -51,13 +51,24 @@ namespace x_template_xPlcConnector
 
             if (withDefaultGroups)
             {
-                DefaultGroups.Create();
-            }
-            if (withDefaultRoles)
-            {
-                DefaultRoles.Create();
+                // create only once 
+                var con = groups.Count;
+                if (groups.Count <= 1)
+                {
+                    DefaultGroups.Create();
+                    DefaultRoles.Create();
+
+                }
             }
 
+            if (withDefaultUsers)
+            {
+                if (users.Count <= 1)
+                {
+                    DefaultUsers.Create();
+
+                }
+            }
 
             return manager;
 
