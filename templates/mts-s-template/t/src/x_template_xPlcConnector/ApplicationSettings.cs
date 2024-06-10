@@ -5,8 +5,10 @@ namespace x_template_xPlcConnector
     public class ApplicationSettings
     {
 
-        public DeployMode DepoyMode{ get; set; } = DeployMode.Local;
+        public DeployMode DeployMode{ get; set; } = DeployMode.Local;
         public DatabaseEngine DatabaseEngine { get; set; } = DatabaseEngine.RavenDbEmbded;
+
+
         public string PlcAmsId =Environment.GetEnvironmentVariable("Tc3Target");
         public bool ShowConsoleOutput { get; set; } = true;
 
