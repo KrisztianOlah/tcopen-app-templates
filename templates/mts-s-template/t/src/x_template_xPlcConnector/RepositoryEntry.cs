@@ -52,22 +52,19 @@ namespace x_template_xPlcConnector
             if (withDefaultGroups)
             {
                 // create only once 
-                var con = groups.Count;
-                if (groups.Count <= 1)
-                {
-                    DefaultGroups.Create();
-                    DefaultRoles.Create();
+                var empty = groups.Count <= 1;
 
-                }
+                if (empty) DefaultGroups.Create();
+                DefaultRoles.Create();
+                if (empty) DefaultRoles.AssignRoles();
+            
             }
 
             if (withDefaultUsers)
             {
-                if (users.Count <= 1)
-                {
-                    DefaultUsers.Create();
+                if (users.Count <= 1) DefaultUsers.Create();
 
-                }
+ 
             }
 
             return manager;
@@ -82,17 +79,23 @@ namespace x_template_xPlcConnector
             var roleGroupManager = new RoleGroupManager(groups);
             
             var manager = SecurityManager.Create(users, roleGroupManager);
-          
+
             if (withDefaultGroups)
             {
                 // create only once 
-                var con = groups.Count;
-                if (groups.Count <= 1)
-                {
-                    DefaultGroups.Create();
-                    DefaultRoles.Create();
+                var empty = groups.Count <= 1;
 
-                }
+                if (empty) DefaultGroups.Create();
+                DefaultRoles.Create();
+                if (empty) DefaultRoles.AssignRoles();
+
+            }
+
+            if (withDefaultUsers)
+            {
+                if (users.Count <= 1) DefaultUsers.Create();
+
+
             }
 
             if (withDefaultUsers)
@@ -147,5 +150,23 @@ namespace x_template_xPlcConnector
 
             }
         }
+        /// <summary>
+        /// Gets a value indicating whether the assembly was built in debug mode.
+        /// </summary>
+        public static bool IsDebug()
+        {
+      
+                bool isDebug = false;
+
+#if (DEBUG)
+                isDebug = true;
+#else
+                    isDebug = false;
+#endif
+
+                return isDebug;
+         
+        }
+   
     }
 }

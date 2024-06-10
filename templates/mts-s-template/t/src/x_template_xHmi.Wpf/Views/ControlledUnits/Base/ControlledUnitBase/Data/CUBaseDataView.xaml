@@ -19,14 +19,15 @@
             <TabItem Header="{x:Static p:strings.StationProcessData}" DataContext="{Binding Component}">
                 <vortex:RenderableContentControl DataContext="{Binding _cuProcessDataDisplay}" PresentationType="ShadowDisplaySlim-ShadowDisplay"></vortex:RenderableContentControl>
             </TabItem>
-            <TabItem Header="{x:Static p:strings.StationTechnologyData}" DataContext="{Binding Component}">
-                <vortex:RenderableContentControl DataContext="{Binding _cuTechnologicalDataDisplay}" PresentationType="ShadowDisplaySlim-ShadowDisplay"></vortex:RenderableContentControl>
-            </TabItem>
+ 
             <TabItem Header="{x:Static p:strings.FullProcessData}">
                  <vortex:RenderableContentControl DataContext="{Binding OnlineData}" PresentationType="ShadowDisplaySlim-ShadowDisplay"></vortex:RenderableContentControl>
 
             </TabItem>
-           
+            <TabItem Header="{x:Static p:strings.StationTechnologyData}" DataContext="{Binding Component}">
+                <vortex:RenderableContentControl DataContext="{Binding _cuTechnologicalDataDisplay}" PresentationType="ShadowDisplaySlim-ShadowDisplay"></vortex:RenderableContentControl>
+            </TabItem>
+
         </TabControl>
     </Grid>
 </UserControl>

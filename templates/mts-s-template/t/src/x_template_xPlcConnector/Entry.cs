@@ -11,6 +11,7 @@ namespace x_template_xPlcConnector
     public class Entry
     {
 
+        
 
 
         private static x_template_xPlcTwinController plc =  new x_template_xPlcTwinController(Tc3ConnectorAdapter.Create(851,true));
