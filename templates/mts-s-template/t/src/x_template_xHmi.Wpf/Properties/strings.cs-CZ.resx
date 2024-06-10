@@ -393,4 +393,16 @@
   <data name="OnlineData" xml:space="preserve">
     <value>ONLINE DATA</value>
   </data>
+  <data name="FullProcessData" xml:space="preserve">
+    <value>Kompletní procesné dáta</value>
+  </data>
+  <data name="StationProcessData" xml:space="preserve">
+    <value>Procesné dáta stanice</value>
+  </data>
+  <data name="StationTechnologyData" xml:space="preserve">
+    <value>Technologický dáta stanice</value>
+  </data>
+  <data name="ShowStationInWindow" xml:space="preserve">
+    <value>Zobrazit stanicu v novem okne.</value>
+  </data>
 </root>
