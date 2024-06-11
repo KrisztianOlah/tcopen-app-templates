@@ -96,7 +96,7 @@ namespace TcOpen.Scaffold
                 }
 
                 Console.WriteLine($"Unpacking '{zippedBranchFile}' to '{CurrentDirectory}'");
-
+     
                 System.IO.Compression.ZipFile.ExtractToDirectory(zippedBranchFile, CurrentDirectory);
                 File.Delete(zippedBranchFile);
                 return templateProjectFolder;
@@ -122,7 +122,7 @@ namespace TcOpen.Scaffold
 
             Console.WriteLine($"Unpacking '{zippedReleaseFile}' to '{unpackFolder}'");
             System.IO.Compression.ZipFile.ExtractToDirectory(zippedReleaseFile, unpackFolder);
-             File.Delete(zippedReleaseFile);
+            File.Delete(zippedReleaseFile);
 
             return unpackFolder;
         }
@@ -153,8 +153,9 @@ namespace TcOpen.Scaffold
         {            
             RenameDirectories(projectFolder);
             ReplaceFileNames(projectFolder);
-
-            var files = Directory.EnumerateFiles(projectFolder, "*.*", SearchOption.AllDirectories);
+            string[] imageExtensions = { ".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".tif" };
+            var files = Directory.EnumerateFiles(projectFolder, "*.*", SearchOption.AllDirectories)
+                .Where(file => !imageExtensions.Contains(Path.GetExtension(file).ToLowerInvariant())); ;
 
             foreach (var file in files)
             {
